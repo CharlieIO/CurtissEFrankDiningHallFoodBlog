@@ -1,0 +1,31 @@
+%h2 Edit Blog Post
+
+= form_for @post, :method => :patch do |post|
+    - if flash[:notice]
+        .col-md-offset-2
+        #notice.message= flash[:notice]
+        .row
+    - if flash[:warning]
+        .col-md-offset-2
+        #notice.message= flash[:warning]
+        .row
+
+    = post.label :title, 'Title'
+    = post.text_field :title
+    .row
+    = post.label :category, 'Meal Time'
+    = post.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One'
+    .row
+    = post.label :location, 'Location'
+    = post.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One'
+    .row
+    = post.label :description, 'How was it?'
+    = post.text_field :description
+    .row
+    = post.label :rating, 'Rating'
+    = post.number_field :rating, in: 0..5, step: 1
+    .row
+    = submit_tag "Edit Blog Post"
+    .row
+    .row
+    = link_to "Back To All Blog Posts", blog_posts_path()

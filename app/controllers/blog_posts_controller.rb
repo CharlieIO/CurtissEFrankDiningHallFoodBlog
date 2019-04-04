@@ -22,9 +22,6 @@ class BlogPostsController < ApplicationController
     if @post.update(create_update_params)
       flash[:notice] = "#{@post.title} was successfully updated!"
       redirect_to blog_post_url(@post) and return
-    else
-      flash[:error] = "Warning, property not updated!"
-      redirect_to edit_blog_post_path(@post) and return
     end
   end
 
@@ -53,9 +50,6 @@ class BlogPostsController < ApplicationController
     elsif @post.save
       flash[:notice] = "Blog Post #{@post.title} created!"
       redirect_to(blog_posts_path()) and return
-    else
-      flash[:warning] = "Warning: Blog Post not created!"
-      redirect_to(new_blog_post_path()) and return
     end
   end
 

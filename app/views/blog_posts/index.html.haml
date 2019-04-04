@@ -1,6 +1,10 @@
 #main.container
   %h1.header The Colgate Food Blog
 
+  - if flash[:notice]
+    .col-md-offset-2
+    #notice.message= flash[:notice]
+    .row
 
   %table.table
     %thead

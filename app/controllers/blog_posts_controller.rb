@@ -16,11 +16,6 @@ class BlogPostsController < ApplicationController
     @post = BlogPost.new
   end
 
-<<<<<<< HEAD
-  def edit
-    @post = BlogPost.find params[:id]
-  end
-
   def update
     @post = BlogPost.find params[:id]
     @post.update(create_update_params)
@@ -38,14 +33,6 @@ class BlogPostsController < ApplicationController
     @post.destroy
     flash[:notice] = "Blog Post '#{@post.title}' deleted!"
     redirect_to blog_posts_path()
-=======
-  def update
-    id = params[:id]
-    p = BlogPost.find(id)
-    p.update(create_update_params)
-    flash[:notice] = "Successfully Updated Post."
-    redirect_to(edit_blog_post_path) and return
->>>>>>> 7e6717263bb21f1fcbc46a7b5efc5c9c04b74534
   end
 
   def create

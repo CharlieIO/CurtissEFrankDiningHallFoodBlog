@@ -29,3 +29,40 @@ Feature: Create a new Blog Post
     And I press "Create A New Blog Post"
     Then I should be on the create a new blog post page
     And I should see "No Location Provided - Failed to Create Blog Post."
+
+  Scenario: Try to create a new blog post without filling out form
+    Given I am on the create a new blog post page
+    When I fill in the following:
+      | Title                     |                           |
+      | How was it?               |                           |
+      | Rating                    |                           |
+
+    And I select "Frank" from "Location"
+    And I press "Create A New Blog Post"
+    Then I should be on the create a new blog post page
+    And I should see "No Title Provided - Failed to Create Blog Post."
+
+
+    Scenario: Try to create a new blog post without filling out form
+      Given I am on the create a new blog post page
+      When I fill in the following:
+        | Title                     | Squash                    |
+        | How was it?               |                           |
+        | Rating                    |                           |
+
+      And I select "Frank" from "Location"
+      And I press "Create A New Blog Post"
+      Then I should be on the create a new blog post page
+      And I should see "No Rating Provided - Failed to Create Blog Post."
+
+    Scenario: Try to create a new blog post without filling out form
+      Given I am on the create a new blog post page
+      When I fill in the following:
+        | Title                     | Squash                    |
+        | How was it?               |                           |
+        | Rating                    | 5                         |
+
+      And I select "Frank" from "Location"
+      And I press "Create A New Blog Post"
+      Then I should be on the create a new blog post page
+      And I should see "No Meal Time Provided - Failed to Create Blog Post."

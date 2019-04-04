@@ -1236,3 +1236,600 @@ Processing by BlogPostsController#show as HTML
   Rendered blog_posts/show.html.haml within layouts/application (0.8ms)
 Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
   [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (1.7ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Dinner"], ["description", "Yummy, yummy, chicken"], ["title", "chicken"], ["rating", 4], ["created_at", "2019-04-04 22:39:50.397259"], ["updated_at", "2019-04-04 22:39:50.397259"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:39:58 -0400
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:39:58 -0400
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.5ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Dinner"], ["description", "watery, and glowing green."], ["title", "Gross Spinach"], ["rating", 1], ["created_at", "2019-04-04 22:39:58.960192"], ["updated_at", "2019-04-04 22:39:58.960192"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:39:58 -0400
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:41:43 -0400
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:41:43 -0400
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Dinner"], ["description", "watery, and glowing green."], ["title", "Gross Spinach"], ["rating", 1], ["created_at", "2019-04-04 22:41:43.566952"], ["updated_at", "2019-04-04 22:41:43.566952"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:41:43 -0400
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (26.6ms)
+Completed 200 OK in 230ms (Views: 212.5ms | ActiveRecord: 0.4ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"salad", "category"=>"Lunch", "location"=>"Frank", "description"=>"Good", "rating"=>"4"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.5ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Lunch"], ["description", "Good"], ["title", "salad"], ["rating", 4], ["created_at", "2019-04-04 22:42:50.688103"], ["updated_at", "2019-04-04 22:42:50.688103"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (54.9ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.3ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Dinner"], ["description", "watery, and glowing green."], ["title", "Gross Spinach"], ["rating", 1], ["created_at", "2019-04-04 22:42:50.784554"], ["updated_at", "2019-04-04 22:42:50.784554"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+Started GET "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 0.1ms)
+Started PUT "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Gross Spinach", "category"=>"Lunch", "location"=>"Coop", "description"=>"watery, and glowing green.", "rating"=>"1"}, "commit"=>"Edit Blog Post", "id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Update (0.1ms)[0m  [1m[33mUPDATE "blog_posts" SET "location" = ?, "category" = ?, "updated_at" = ? WHERE "blog_posts"."id" = ?[0m  [["location", "Coop"], ["category", "Lunch"], ["updated_at", "2019-04-04 22:42:50.868549"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts/1/edit
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:42:50 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (29.6ms)
+Completed 200 OK in 213ms (Views: 198.8ms | ActiveRecord: 0.4ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"salad", "category"=>"Lunch", "location"=>"Frank", "description"=>"Good", "rating"=>"4"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.5ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Lunch"], ["description", "Good"], ["title", "salad"], ["rating", 4], ["created_at", "2019-04-04 22:45:40.537855"], ["updated_at", "2019-04-04 22:45:40.537855"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (51.2ms)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Dinner"], ["description", "watery, and glowing green."], ["title", "Gross Spinach"], ["rating", 1], ["created_at", "2019-04-04 22:45:40.678241"], ["updated_at", "2019-04-04 22:45:40.678241"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+Started GET "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms)
+Started PUT "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Gross Spinach", "category"=>"Lunch", "location"=>"Coop", "description"=>"watery, and glowing green.", "rating"=>"1"}, "commit"=>"Edit Blog Post", "id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Update (0.2ms)[0m  [1m[33mUPDATE "blog_posts" SET "location" = ?, "category" = ?, "updated_at" = ? WHERE "blog_posts"."id" = ?[0m  [["location", "Coop"], ["category", "Lunch"], ["updated_at", "2019-04-04 22:45:40.735181"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts/1/edit
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:45:40 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 177ms (Views: 142.8ms | ActiveRecord: 0.4ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"salad", "category"=>"Lunch", "location"=>"Frank", "description"=>"Good", "rating"=>"4"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.9ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Lunch"], ["description", "Good"], ["title", "salad"], ["rating", 4], ["created_at", "2019-04-04 22:46:08.693551"], ["updated_at", "2019-04-04 22:46:08.693551"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"Frank", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.3ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Dinner"], ["description", "watery, and glowing green."], ["title", "Gross Spinach"], ["rating", 1], ["created_at", "2019-04-04 22:46:08.839923"], ["updated_at", "2019-04-04 22:46:08.839923"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+Started GET "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.1ms)
+Started PUT "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Gross Spinach", "category"=>"Lunch", "location"=>"Coop", "description"=>"watery, and glowing green.", "rating"=>"1"}, "commit"=>"Edit Blog Post", "id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Update (0.1ms)[0m  [1m[33mUPDATE "blog_posts" SET "location" = ?, "category" = ?, "updated_at" = ? WHERE "blog_posts"."id" = ?[0m  [["location", "Coop"], ["category", "Lunch"], ["updated_at", "2019-04-04 22:46:08.901369"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts/1/edit
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:46:08 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:48:02 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (26.0ms)
+Completed 200 OK in 206ms (Views: 187.9ms | ActiveRecord: 0.5ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:48:02 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"salad", "category"=>"Lunch", "location"=>"Frank", "description"=>"Good", "rating"=>"4"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.8ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Lunch"], ["description", "Good"], ["title", "salad"], ["rating", 4], ["created_at", "2019-04-04 22:48:02.875553"], ["updated_at", "2019-04-04 22:48:02.875553"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:48:02 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (46.1ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:48:02 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:48:02 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:48:02 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:48:02 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"Frank", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Squash", "category"=>"", "location"=>"Frank", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.3ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Dinner"], ["description", "watery, and glowing green."], ["title", "Gross Spinach"], ["rating", 1], ["created_at", "2019-04-04 22:48:03.043072"], ["updated_at", "2019-04-04 22:48:03.043072"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+Started GET "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+Started PUT "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Gross Spinach", "category"=>"Lunch", "location"=>"Coop", "description"=>"watery, and glowing green.", "rating"=>"1"}, "commit"=>"Edit Blog Post", "id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Update (0.1ms)[0m  [1m[33mUPDATE "blog_posts" SET "location" = ?, "category" = ?, "updated_at" = ? WHERE "blog_posts"."id" = ?[0m  [["location", "Coop"], ["category", "Lunch"], ["updated_at", "2019-04-04 22:48:03.128024"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts/1/edit
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:48:03 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (20.7ms)
+Completed 200 OK in 215ms (Views: 195.1ms | ActiveRecord: 0.5ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"salad", "category"=>"Lunch", "location"=>"Frank", "description"=>"Good", "rating"=>"4"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (1.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Lunch"], ["description", "Good"], ["title", "salad"], ["rating", 4], ["created_at", "2019-04-04 22:50:00.785286"], ["updated_at", "2019-04-04 22:50:00.785286"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"Frank", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Squash", "category"=>"", "location"=>"Frank", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:50:00 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-04 18:50:01 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Squash", "category"=>"", "location"=>"Frank", "description"=>"", "rating"=>"5"}, "commit"=>"Create A New Blog Post"}
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-04 18:50:01 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Create (0.3ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Dinner"], ["description", "watery, and glowing green."], ["title", "Gross Spinach"], ["rating", 1], ["created_at", "2019-04-04 22:50:01.011656"], ["updated_at", "2019-04-04 22:50:01.011656"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-04 18:50:01 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  Rendered blog_posts/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+Started GET "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:50:01 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:50:01 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+Started PUT "/blog_posts/1" for 127.0.0.1 at 2019-04-04 18:50:01 -0400
+Processing by BlogPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Gross Spinach", "category"=>"Lunch", "location"=>"Coop", "description"=>"watery, and glowing green.", "rating"=>"1"}, "commit"=>"Edit Blog Post", "id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBlogPost Update (0.1ms)[0m  [1m[33mUPDATE "blog_posts" SET "location" = ?, "category" = ?, "updated_at" = ? WHERE "blog_posts"."id" = ?[0m  [["location", "Coop"], ["category", "Lunch"], ["updated_at", "2019-04-04 22:50:01.058400"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts/1/edit
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/blog_posts/1/edit" for 127.0.0.1 at 2019-04-04 18:50:01 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m

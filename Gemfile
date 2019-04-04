@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.6.0'
 
 gem 'haml', '~> 5.0.4'
 gem 'haml-rails'
@@ -65,6 +65,8 @@ group :test do
   gem 'chromedriver-helper'
   gem 'database_cleaner'
   gem 'rails-controller-testing'
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov'
 end
 
 group :production do

@@ -1,0 +1,19 @@
+#main.container
+  %h3.header Blog Posts
+
+  %table.table
+    %thead
+      %tr
+        %th Title
+        %th Category
+        %th Location
+        %th Description
+        %th Rating
+    %tbody
+      -@posts.each do |post|
+        %tr.post
+          %td.title= link_to "#{post.title}", blog_post_path(post)
+          %td.category= post.category
+          %td.location= post.location
+          %td.description= truncate(post.description, length: 30)
+          %td.rating= "#{post.rating}" + "/5 Stars"

@@ -76,6 +76,42 @@ end
 # TODO: Add support for checkbox, select or option
 # based on naming conventions.
 #
+
+Given /^these RentalProperties:$/ do |table| #Convert string to regev
+  # hash = {:title => "",
+  # "description" => :description,
+  # "price" => :price,
+  # "bedrooms" => :bedrooms,
+  # "beds" => :beds,
+  # "maxpersons" => :maxpersons,
+  # "bathrooms" => :bathrooms,
+  # "pets_allowed" => :pets_allowed,
+  # "address" => :address}
+
+  hash = {}
+
+  t = table.hashes
+  t.each do |row|
+    row.each do |k, v|
+      if k.eql? "Title"
+        hash[:title] = v
+        # byebug
+      elsif k.eql? "Category"
+        hash[:category] = v
+      elsif k.eql? "Location"
+        hash[:location] = v
+      elsif k.eql? "Description"
+        hash[:description] = v
+      elsif k.eql? "Rating"
+        hash[:rating] = v
+      end
+    end
+    BlogPost.create!(hash)
+  end
+end
+
+
+
 When /^(?:|I )fill in the following:$/ do |fields|
   fields.rows_hash.each do |name, value|
     fill_in(name, :with => value)

@@ -1,6 +1,6 @@
 %h2 Edit Blog Post
 
-= form_for @post, :method => :patch do |post|
+= form_for @post, :method => :put do |post|
     - if flash[:notice]
         .col-md-offset-2
         #notice.message= flash[:notice]

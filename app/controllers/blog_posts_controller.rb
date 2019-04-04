@@ -12,6 +12,29 @@ class BlogPostsController < ApplicationController
     @post = BlogPost.new
   end
 
+  def edit
+    @post = BlogPost.find params[:id]
+  end
+
+  def update
+    @post = BlogPost.find params[:id]
+    @post.update(create_update_params)
+    if @post.update(create_update_params)
+      flash[:notice] = "#{@post.title} was successfully updated!"
+      redirect_to blog_post_url(@post) and return
+    else
+      flash[:error] = "Warning, property not updated!"
+      redirect_to edit_blog_post_path(@post) and return
+    end
+  end
+
+  def destroy
+    @post = BlogPost.find(params[:id])
+    @post.destroy
+    flash[:notice] = "Blog Post '#{@post.title}' deleted!"
+    redirect_to blog_posts_path()
+  end
+
   def create
     @post = BlogPost.new(create_update_params)
 

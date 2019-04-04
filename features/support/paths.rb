@@ -19,6 +19,9 @@ module NavigationHelpers
     when /^the blog posts page/
       "#{blog_posts_path}"
 
+    when /^the blog post page/
+      "#{blog_post_path}"
+
     when /^the create a new blog post page/
       "#{new_blog_post_path}"
 

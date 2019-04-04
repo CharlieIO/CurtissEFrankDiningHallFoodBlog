@@ -2696,3 +2696,473 @@ Processing by BlogPostsController#new as HTML
 Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-04-04 17:45:28 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (24.2ms)
+Completed 200 OK in 317ms (Views: 298.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blog_posts/1" for ::1 at 2019-04-04 17:45:32 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/blog_posts/1" for ::1 at 2019-04-04 17:45:41 -0400
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for BlogPostsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/blog_posts/1" for ::1 at 2019-04-04 17:48:10 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 41ms (Views: 21.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 17:48:14 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 17:49:03 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (16.0ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blog_posts/8" for ::1 at 2019-04-04 17:49:05 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 63ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/blog_posts/8" for ::1 at 2019-04-04 17:49:08 -0400
+Processing by BlogPostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ErClekUk23SdMU0ZLt78soJku1J3osLe9wGdWB4DHI8xBn4kyzYxWtOZ4149qkVqMK+TIsK2m+CQWjFFqe1yLA==", "id"=>"8"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:17
+  [1m[36mBlogPost Destroy (0.5ms)[0m  [1m[31mDELETE FROM "blog_posts" WHERE "blog_posts"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/blog_posts_controller.rb:17
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:17
+Redirected to http://localhost:3000/blog_posts
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 17:49:08 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-04 17:49:10 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-04 17:49:33 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OTn0gsX749TxbcACoslYixzn2jC/EMXM3HRsH6dSDnTG+LD7kL7MHBu8kjRs0Oxld21Pm2loQhx6S1AgxYR0wA==", "blog_post"=>{"title"=>"lettuce", "category"=>"Breakfast", "location"=>"Coop", "description"=>"good", "rating"=>"3"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:37
+  [1m[36mBlogPost Create (0.4ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Coop"], ["category", "Breakfast"], ["description", "good"], ["title", "lettuce"], ["rating", 3], ["created_at", "2019-04-04 21:49:33.025177"], ["updated_at", "2019-04-04 21:49:33.025177"]]
+  ↳ app/controllers/blog_posts_controller.rb:37
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:37
+Redirected to http://localhost:3000/blog_posts/9
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/blog_posts/9" for ::1 at 2019-04-04 17:49:33 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/9/edit" for ::1 at 2019-04-04 17:56:38 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h2 Edit Blog Post
+    2: 
+    3: = form_for @post, :method => :patch do |post|
+    4:     - if flash[:notice]
+    5:         .col-md-offset-2
+    6:         #notice.message= flash[:notice]
+  
+app/views/blog_posts/edit.html.haml:3:in `_app_views_blog_posts_edit_html_haml___1117338157028882830_70281225184560'
+Started GET "/blog_posts/9/edit" for ::1 at 2019-04-04 17:57:02 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h2 Edit Blog Post
+    2: 
+    3: = form_for @post, :method => :put do |post|
+    4:     - if flash[:notice]
+    5:         .col-md-offset-2
+    6:         #notice.message= flash[:notice]
+  
+app/views/blog_posts/edit.html.haml:3:in `_app_views_blog_posts_edit_html_haml___1117338157028882830_70281216398980'
+Started POST "/__web_console/repl_sessions/d2c7915ca240522c097159fd514ab7f5/trace" for ::1 at 2019-04-04 17:57:30 -0400
+Started GET "/blog_posts/9/edit" for ::1 at 2019-04-04 17:58:13 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:16
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 25ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/blog_posts/9" for ::1 at 2019-04-04 17:58:18 -0400
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for BlogPostsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PUT "/blog_posts/9" for ::1 at 2019-04-04 17:59:39 -0400
+Processing by BlogPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z+JXHqbtEeTkj8TVDi3SE2SBKmGy76JtyS8cVspzPG9EVIxAKP/7yqonapIdWWvL1koCEQf7+1OudLBLfZ1SzA==", "blog_post"=>{"title"=>"lettuce", "category"=>"Breakfast", "location"=>"Coop", "description"=>"good", "rating"=>"1"}, "commit"=>"Edit Blog Post", "id"=>"9"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[36mBlogPost Update (0.3ms)[0m  [1m[33mUPDATE "blog_posts" SET "rating" = ?, "updated_at" = ? WHERE "blog_posts"."id" = ?[0m  [["rating", 1], ["updated_at", "2019-04-04 21:59:39.853323"], ["id", 9]]
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:22
+Redirected to http://localhost:3000/blog_posts/9
+Completed 302 Found in 16ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/blog_posts/9" for ::1 at 2019-04-04 17:59:39 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/9/edit" for ::1 at 2019-04-04 17:59:42 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:16
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/blog_posts/9" for ::1 at 2019-04-04 17:59:46 -0400
+Processing by BlogPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GXVTMurDPCyyd+5q6n1wjYZMge77u9ATBgY8sDDBAVATSiMYpLw/RDm/gNEH91jPNE7h438q9XHwZmRGKyyXpg==", "blog_post"=>{"title"=>"lettuce", "category"=>"Breakfast", "location"=>"Coop", "description"=>"good", "rating"=>"3"}, "commit"=>"Edit Blog Post", "id"=>"9"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[36mBlogPost Update (0.4ms)[0m  [1m[33mUPDATE "blog_posts" SET "rating" = ?, "updated_at" = ? WHERE "blog_posts"."id" = ?[0m  [["rating", 3], ["updated_at", "2019-04-04 21:59:46.621132"], ["id", 9]]
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:22
+Redirected to http://localhost:3000/blog_posts/9
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/blog_posts/9" for ::1 at 2019-04-04 17:59:46 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 17:59:48 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts/1" for ::1 at 2019-04-04 18:03:56 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (18.8ms)
+Completed 200 OK in 42ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts/1" for ::1 at 2019-04-04 18:06:55 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 32ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blog_posts/1/edit" for ::1 at 2019-04-04 18:07:40 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:16
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 18:11:14 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/1" for ::1 at 2019-04-04 18:12:40 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (40.9ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/1/edit" for ::1 at 2019-04-04 18:13:18 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:16
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/1" for ::1 at 2019-04-04 18:13:35 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/1/edit" for ::1 at 2019-04-04 18:13:39 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:16
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/blog_posts/1" for ::1 at 2019-04-04 18:14:44 -0400
+Processing by BlogPostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vpykjB+FoPwNTaDUXOG32k0vQW9NfcsbIckiEt64fu9daUMyasePvCppRLA93XKnAxRC41aV3Qf2tuXH8wh72Q==", "blog_post"=>{"title"=>"Gross Spinach", "category"=>"Dinner", "location"=>"Frank", "description"=>"watery, and glowing green.", "rating"=>"1"}, "commit"=>"Edit Blog Post", "id"=>"1"}
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:22
+Redirected to http://localhost:3000/blog_posts/1
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts/1" for ::1 at 2019-04-04 18:14:44 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts/1/edit" for ::1 at 2019-04-04 18:14:48 -0400
+Processing by BlogPostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:16
+  Rendering blog_posts/edit.html.haml within layouts/application
+  Rendered blog_posts/edit.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 18:16:06 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+

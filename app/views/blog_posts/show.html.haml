@@ -3,6 +3,7 @@
         .col-md-offset-1
         .col-md-4
             %h3.header.title= "#{@post.title}"
+        .col-md-4.location= "#{@post.category} at #{@post.location}"
         .col-md-offset-1
 
     .row
@@ -11,7 +12,6 @@
 
     .row
         .col-md-offset-2
-        .col-md-4.location= "#{@post.location}"
         .col-md-4.rating= "Rated #{@post.rating} / 5 stars"
 
     %br

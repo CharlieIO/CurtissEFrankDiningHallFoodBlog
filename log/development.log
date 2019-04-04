@@ -1978,3 +1978,721 @@ Processing by BlogPostsController#index as HTML
 Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for ::1 at 2019-04-03 20:31:17 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 182ms (Views: 173.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blog_posts/1" for ::1 at 2019-04-03 20:31:18 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts/2" for ::1 at 2019-04-03 20:32:14 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-03 20:53:07 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-04-03 20:53:08 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-03 21:10:47 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:10:50 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h2 Create A New Blog Post
+    2: 
+    3: = form_for @post, :method => :post do |post|
+    4:     - if flash[:notice]
+    5:         .col-md-offset-2
+    6:         #notice.message= flash[:notice]
+  
+app/views/blog_posts/new.html.haml:3:in `_app_views_blog_posts_new_html_haml___3789659528630520200_70306920482820'
+Started POST "/__web_console/repl_sessions/0dd03169740fddb0fe2000e69ff169c6/trace" for ::1 at 2019-04-03 21:13:44 -0400
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:15:01 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h2 Create A New Blog Post
+    2: 
+    3: = form_for @post, :method => :post do |post|
+    4:     - if flash[:notice]
+    5:         .col-md-offset-2
+    6:         #notice.message= flash[:notice]
+  
+app/views/blog_posts/new.html.haml:3:in `_app_views_blog_posts_new_html_haml___3789659528630520200_70306887551800'
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:15:02 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: %h2 Create A New Blog Post
+    2: 
+    3: = form_for @post, :method => :post do |post|
+    4:     - if flash[:notice]
+    5:         .col-md-offset-2
+    6:         #notice.message= flash[:notice]
+  
+app/views/blog_posts/new.html.haml:3:in `_app_views_blog_posts_new_html_haml___3789659528630520200_70306921109120'
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:15:32 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+    24:     = post.label :description, 'How was it?', :size => 100
+    25:     = post.text_field :description
+    26:     .row
+    27:     = p.label :rating, 'Rating'
+    28:     = p.number_field :rating, in: 0..5, step: 1
+    29:     .row
+    30:     = submit_tag "Create A New Blog Post"
+  
+app/views/blog_posts/new.html.haml:27:in `block in _app_views_blog_posts_new_html_haml___3789659528630520200_70306889359180'
+app/views/blog_posts/new.html.haml:3:in `_app_views_blog_posts_new_html_haml___3789659528630520200_70306889359180'
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:16:22 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (21.7ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:16:49 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 6 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    15:     .row
+    16:     = post.label :category, 'Food Type'
+    17:     = post.select :category, ['American', 'Italian', 'French', 'Chinese', 'Japanese', 'Spanish', 'Mexican', 'Indian', 'Greek', 'Thai', 'Other...'], prompt: 'Select One'
+    18:       = post.text_field :category
+    19:     .row
+    20:     = post.label :location, 'Location'
+    21:     = post.select :location, ['Frank', 'Coop', 'Library Cafe']
+  
+app/views/blog_posts/new.html.haml:18
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:17:15 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:17:36 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:17:45 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:17:46 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:17:51 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:18:04 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:18:05 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-03 21:19:25 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e2+Ner2+35du5kGxDbMy+HaAbTdW5U5Yhud1CjIiTsCErskD6PvwX4Q3E4fDqoYWHQr4nICdyYgg2Ek1UPQ0dA==", "blog_post"=>{"title"=>"Steak Salad", "category"=>"American", "location"=>"Frank", "description"=>"Over-cooked, pepper sauce made me sneeze the entire meal", "rating"=>"3"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[36mBlogPost Create (0.5ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "American"], ["description", "Over-cooked, pepper sauce made me sneeze the entire meal"], ["title", "Steak Salad"], ["rating", 3], ["created_at", "2019-04-04 01:19:25.339488"], ["updated_at", "2019-04-04 01:19:25.339488"]]
+  ↳ app/controllers/blog_posts_controller.rb:21
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:21
+Redirected to http://localhost:3000/blog_posts/6
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/blog_posts/6" for ::1 at 2019-04-03 21:19:25 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:20:31 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/6" for ::1 at 2019-04-03 21:20:41 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:20:56 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:20:58 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:43:25 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-03 21:43:33 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ltKBxFFXifYh/IL4w2NyliXNezS+2Sc4/8q2kHj0jCRpE8W9BBKmPsst0M4NesZ4Tkfun2ihoOhZ9YqvGiL2kA==", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://localhost:3000/blog_posts/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:43:33 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:46:48 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 27ms (Views: 17.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-03 21:47:02 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bKjxCuFSquCHzePeGYtuEw/UQL2INPz2eBg28f+LTf5PHipUb0BAzsllTZkK/9fLvR9ozT0gpcgfQ5rsSGUjXQ==", "blog_post"=>{"title"=>"Steak Salad", "category"=>"", "location"=>"Coop", "description"=>"", "rating"=>"1"}, "commit"=>"Create A New Blog Post"}
+No template found for BlogPostsController#create, rendering head :no_content
+Completed 204 No Content in 34ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:47:15 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 23ms (Views: 14.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-03 21:47:43 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"22ktqftcEjUYHqq6usIrUMY5y1DjvuFDfobaDNym72343/b3dU74G1a2BP2ptpKIdPLjIFaquH0Z3XYRa0iBzg==", "blog_post"=>{"title"=>"squash soup", "category"=>"Breakfast", "location"=>"Library Cafe", "description"=>"", "rating"=>"5"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:30
+  [1m[36mBlogPost Create (0.7ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Library Cafe"], ["category", "Breakfast"], ["description", ""], ["title", "squash soup"], ["rating", 5], ["created_at", "2019-04-04 01:47:43.200390"], ["updated_at", "2019-04-04 01:47:43.200390"]]
+  ↳ app/controllers/blog_posts_controller.rb:30
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:30
+Redirected to http://localhost:3000/blog_posts/7
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/blog_posts/7" for ::1 at 2019-04-03 21:47:43 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:47:46 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:47:59 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 175ms (Views: 166.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:48:00 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts/4" for ::1 at 2019-04-03 21:49:01 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:50:39 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:13
+  Rendered blog_posts/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:51:07 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:51:13 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:51:24 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:51:30 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:52:44 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:52:55 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-04-03 21:55:27 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 21:56:07 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-03 21:56:44 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1p1YNhHwyexaCxP8slezmtvq9TtFPR4Na0jbupqHeP4pXBxPRLXmJLDaQcp8Tgd0sGBgkJNFmd3Nd+eF+FECSg==", "blog_post"=>{"title"=>"terrible turkey", "category"=>"Dinner", "location"=>"Coop", "description"=>"gross, dry, smelly", "rating"=>"1"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:30
+  [1m[36mBlogPost Create (1.1ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Coop"], ["category", "Dinner"], ["description", "gross, dry, smelly"], ["title", "terrible turkey"], ["rating", 1], ["created_at", "2019-04-04 01:56:44.715276"], ["updated_at", "2019-04-04 01:56:44.715276"]]
+  ↳ app/controllers/blog_posts_controller.rb:30
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:30
+Redirected to http://localhost:3000/blog_posts/8
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/blog_posts/8" for ::1 at 2019-04-03 21:56:44 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:57:05 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/8" for ::1 at 2019-04-03 21:57:45 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 21:57:48 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blog_posts"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "location" text, "category" varchar, "description" text, "title" text, "rating" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190403232200)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-04 02:08:30.188347"], ["updated_at", "2019-04-04 02:08:30.188347"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-04-04 02:08:30.193635"], ["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/blog_posts" for ::1 at 2019-04-03 22:13:46 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 218ms (Views: 208.6ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blog_posts"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "location" text, "category" varchar, "description" text, "title" text, "rating" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190403232200)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-04 02:14:01.105140"], ["updated_at", "2019-04-04 02:14:01.105140"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-04-04 02:14:01.108959"], ["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blog_posts"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "location" text, "category" varchar, "description" text, "title" text, "rating" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190403232200)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-04 02:18:18.955729"], ["updated_at", "2019-04-04 02:18:18.955729"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-04-04 02:18:18.970367"], ["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 22:40:22 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 22:40:27 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 22:56:07 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (24.3ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `deep_stringify_keys' for "/blog_posts":String):
+    25:     = post.label :rating, 'Rating'
+    26:     = post.number_field :rating, in: 0..5, step: 1
+    27:     .row
+    28:     = submit_tag "Create A New Blog Post", blog_posts_path()
+    29:     .row
+    30:     .row
+    31:     = link_to "Back To All Blog Posts", blog_posts_path()
+  
+app/views/blog_posts/new.html.haml:28:in `block in _app_views_blog_posts_new_html_haml___3387182246534938841_70133616945700'
+app/views/blog_posts/new.html.haml:3:in `_app_views_blog_posts_new_html_haml___3387182246534938841_70133616945700'
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 22:57:52 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 36ms (Views: 24.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-03 22:57:54 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ga2gkoGP8yVbXktBTKAuBTxZMUYVxziffJ8uTFagRIqiG3vMD50ZCxX25QZf1JfdjpIZNqDTYaEbxIJR4U4qKQ==", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://localhost:3000/blog_posts/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 22:57:54 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-03 22:59:09 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:14
+  Rendered blog_posts/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 23:09:07 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-03 23:09:09 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gPMuwi5JZDfeznCKa6WzgvG+joMIirBxvIDPiQJPnax/Mmq7ewxL/zQfIrylvAdsmjQbKN7yN6Eav/O2YJnnGA==", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+Redirected to http://localhost:3000/blog_posts/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-03 23:09:09 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+

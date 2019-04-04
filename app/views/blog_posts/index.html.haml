@@ -1,5 +1,6 @@
 #main.container
-  %h3.header Blog Posts
+  %h1.header The Colgate Food Blog
+
 
   %table.table
     %thead
@@ -17,3 +18,6 @@
           %td.location= post.location
           %td.description= truncate(post.description, length: 30)
           %td.rating= "#{post.rating}" + "/5 Stars"
+
+    %tr.new
+      %th.new= link_to "Create A New Blog Post", new_blog_post_path()

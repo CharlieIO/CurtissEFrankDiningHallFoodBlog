@@ -8,8 +8,20 @@ class BlogPostsController < ApplicationController
     @post = BlogPost.find(params[:id])
   end
 
+  def edit
+    @post = BlogPost.find(params[:id])
+  end
+
   def new
     @post = BlogPost.new
+  end
+
+  def update
+    id = params[:id]
+    p = BlogPost.find(id)
+    p.update(create_update_params)
+    flash[:notice] = "Successfully Updated Post."
+    redirect_to(edit_blog_post_path) and return
   end
 
   def create

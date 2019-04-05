@@ -41,7 +41,7 @@ class BlogPostsController < ApplicationController
     elsif !@post.title?
       flash[:warning] = "No Title Provided - Failed to Create Blog Post."
       redirect_to(new_blog_post_path()) and return
-    elsif !@post.rating? && !@post.rating == 0
+    elsif !@post.rating? && !(@post.rating == 0)
       flash[:warning] = "No Rating Provided - Failed to Create Blog Post."
       redirect_to(new_blog_post_path()) and return
     elsif !@post.category?

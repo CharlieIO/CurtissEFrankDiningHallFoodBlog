@@ -21,7 +21,7 @@ class BlogPostsController < ApplicationController
     @post.update(create_update_params)
     if @post.update(create_update_params)
       flash[:notice] = "#{@post.title} was successfully updated!"
-      redirect_to blog_post_url(@post) and return
+      redirect_to edit_blog_post_path(@post) and return
     end
   end
 

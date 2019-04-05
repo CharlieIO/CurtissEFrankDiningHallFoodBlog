@@ -4096,3 +4096,92 @@ Processing by BlogPostsController#show as HTML
 Completed 200 OK in 28ms (Views: 19.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/blog_posts" for ::1 at 2019-04-04 21:13:20 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:18
+  Rendered blog_posts/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 21:13:21 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:18
+  Rendered blog_posts/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/1" for ::1 at 2019-04-04 21:13:22 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-04 21:21:45 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (18.7ms)
+Completed 200 OK in 46ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-04 21:21:53 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JiPEEMqrnC765fCNXGffTkUNCaH4AvJqWbCWYZyq4aHZ4oBpn+6z5hA0oruSfmugLoecCi56dbr/j6pe/nybFQ==", "blog_post"=>{"title"=>"a", "category"=>"Breakfast", "location"=>"Coop", "description"=>"a", "rating"=>"0"}, "commit"=>"Create A New Blog Post"}
+No template found for BlogPostsController#create, rendering head :no_content
+Completed 204 No Content in 41ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 21:21:57 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:18
+  Rendered blog_posts/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 21:22:27 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:18
+  Rendered blog_posts/index.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-04 21:22:28 -0400
+Processing by BlogPostsController#new as HTML
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-04 21:22:36 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"awdNjS9yztXaI3LDJMD3n7zn+zC7b0CtMLB/gxkBnyGUxgn0ejfhHTDyIPXq2UNx121um20Xx32Wj0O8e9fllQ==", "blog_post"=>{"title"=>"a", "category"=>"Breakfast", "location"=>"Coop", "description"=>"a", "rating"=>"0"}, "commit"=>"Create A New Blog Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:50
+  [1m[36mBlogPost Create (1.0ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Coop"], ["category", "Breakfast"], ["description", "a"], ["title", "a"], ["rating", 0], ["created_at", "2019-04-05 01:22:36.852020"], ["updated_at", "2019-04-05 01:22:36.852020"]]
+  ↳ app/controllers/blog_posts_controller.rb:50
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:50
+Redirected to http://localhost:3000/blog_posts
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-04 21:22:36 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:18
+  Rendered blog_posts/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+

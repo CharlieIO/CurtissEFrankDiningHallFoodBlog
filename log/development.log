@@ -4075,3 +4075,24 @@ Processing by BlogPostsController#index as HTML
 Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/blog_posts" for ::1 at 2019-04-04 20:53:28 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:18
+  Rendered blog_posts/index.html.haml within layouts/application (19.7ms)
+Completed 200 OK in 202ms (Views: 190.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/blog_posts/1" for ::1 at 2019-04-04 20:53:29 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:8
+  Rendering blog_posts/show.html.haml within layouts/application
+  Rendered blog_posts/show.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 28ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+

@@ -19,7 +19,7 @@ class BlogPostsController < ApplicationController
   def update
     @post = BlogPost.find params[:id]
     @post.update(create_update_params)
-    if @post.update(create_update_params)
+    if @post.save
       flash[:notice] = "#{@post.title} was successfully updated!"
       redirect_to edit_blog_post_path(@post) and return
     end
@@ -55,6 +55,6 @@ class BlogPostsController < ApplicationController
 
 private
   def create_update_params
-    params.require(:blog_post).permit(:title, :description, :location, :category, :rating)
+    params.require(:blog_post).permit(:title, :description, :location, :category, :rating, :image)
   end
 end

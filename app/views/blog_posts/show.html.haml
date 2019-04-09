@@ -8,6 +8,7 @@
             %h3.header.title= "#{@post.title}"
         .col-md-4.location= "#{@post.category} at #{@post.location}"
         .col-md-offset-1
+            %td.image= image_tag @post.image.attached? ? @post.image.variant(resize: "500x500^") : 'noimg.png'
 
     .row
         .col-md-offset-2

@@ -25,7 +25,11 @@
     = post.label :rating, 'Rating'
     = post.number_field :rating, in: 0..5, step: 1
     .row
-    = submit_tag "Edit Blog Post"
+    =post.label :image, "Image"
+    =post.file_field :image, accept: "image/png,image/gif,image/jpeg"
+    .row
+    %br
+    = post.submit "Update Blog Post"
     .row
     .row
     = link_to "Back To All Blog Posts", blog_posts_path()

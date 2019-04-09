@@ -25,6 +25,9 @@
     = post.label :rating, 'Rating'
     = post.number_field :rating, in: 0..5, step: 1
     .row
+    =post.label :image, "Image"
+    =post.file_field :image, accept: "image/png,image/gif,image/jpeg"
+    .row
     = submit_tag "Create A New Blog Post"
     .row
     .row

@@ -1,5 +1,7 @@
 class BlogPostsController < ApplicationController
 
+  before_action :authenticate_user!, :only=>[:edit, :update, :new, :create, :destroy] 
+
   def index
     @posts = BlogPost.all
   end
@@ -10,10 +12,12 @@ class BlogPostsController < ApplicationController
 
   def edit
     @post = BlogPost.find(params[:id])
+    @user_id = current_user.id
   end
 
   def new
     @post = BlogPost.new
+    @user_id = current_user.id
   end
 
   def update

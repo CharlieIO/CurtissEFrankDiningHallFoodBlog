@@ -8,6 +8,7 @@ class BlogPostsController < ApplicationController
 
   def show
     @post = BlogPost.find(params[:id])
+    @user = @post.user.email
   end
 
   def edit
@@ -38,6 +39,7 @@ class BlogPostsController < ApplicationController
 
   def create
     @post = BlogPost.new(create_update_params)
+    @post.user_id = current_user.id if current_user
 
     if !@post.location?
       flash[:warning] = "No Location Provided - Failed to Create Blog Post."
@@ -54,11 +56,14 @@ class BlogPostsController < ApplicationController
     elsif @post.save
       flash[:notice] = "Blog Post #{@post.title} created!"
       redirect_to(blog_posts_path()) and return
+    else
+      flash[:warning] = "Unknown Error"
+      redirect_to(new_blog_post_path()) and return
     end
   end
 
 private
   def create_update_params
-    params.require(:blog_post).permit(:title, :description, :location, :category, :rating, :image)
+    params.require(:blog_post).permit(:title, :description, :location, :category, :rating, :image, :current_user)
   end
 end

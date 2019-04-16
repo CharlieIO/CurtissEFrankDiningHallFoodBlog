@@ -20607,3 +20607,295 @@ Processing by BlogPostsController#index as HTML
 Completed 200 OK in 71ms (Views: 65.6ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/" for ::1 at 2019-04-16 19:37:53 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:5
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:27
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  Rendered blog_posts/index.html.haml within layouts/application (191.6ms)
+Completed 200 OK in 228ms (Views: 210.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-16 19:37:58 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 6 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    2: 
+    3: %p.navbar-text.pull-right
+    4:     - if user_signed_in?
+    5:       %p= "Logged in as " + current_user.email + "."
+    6:       %p.navbar-link= link_to 'Edit profile', edit_user_registration_path
+    7:       %p.navbar-link= link_to "Logout", destroy_user_session_path, method: :delete
+    8:     - else
+  
+app/views/blog_posts/new.html.haml:5
+Started GET "/blog_posts/new" for ::1 at 2019-04-16 19:38:45 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Got "else" with no preceding "if"):
+     5:     %p= "Logged in as " + current_user.email + "."
+     6:     %p.navbar-link= link_to 'Edit profile', edit_user_registration_path
+     7:     %p.navbar-link= link_to "Logout", destroy_user_session_path, method: :delete
+     8:     - else
+     9:     %p.navbar-link= link_to "Sign up", new_user_registration_path
+    10:     %p.navbar-link= link_to "Login", new_user_session_path
+    11: 
+  
+app/views/blog_posts/new.html.haml:8
+Started GET "/blog_posts/new" for ::1 at 2019-04-16 19:39:14 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    10:     %p.navbar-link= link_to "Login", new_user_session_path
+    11: 
+    12: = form_for @post, :method => :post do |post|
+    13:     - if flash[:notice]
+    14:         .col-md-offset-2
+    15:         #notice.message= flash[:notice]
+    16:         .row
+  
+app/views/blog_posts/new.html.haml:13
+Started GET "/blog_posts/new" for ::1 at 2019-04-16 19:39:40 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (21.5ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-16 19:39:52 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YrKthgIesGKMzqLKcCzYaT6hrCu61E2/5PlWOt53vyHoNBTlqWhlF/NOouG69AFflA3iBGtS9OiYkB0pAkIIfw==", "blog_post"=>{"title"=>"nivnfd", "category"=>"Breakfast", "location"=>"Library Cafe", "description"=>"vfvfdvdf", "rating"=>"4"}, "commit"=>"Create A New Blog Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:54
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:54
+No template found for BlogPostsController#create, rendering head :no_content
+Completed 204 No Content in 58ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-16 19:40:21 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-16 19:40:23 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:5
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:27
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  Rendered blog_posts/index.html.haml within layouts/application (27.1ms)
+Completed 200 OK in 47ms (Views: 44.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-16 19:40:26 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (18.7ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-16 19:41:09 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 45ms (Views: 23.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-16 19:41:26 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KtWHzYMSGBHUlWHxwcR3W2ACbfMHljdjoMGjgVO+RsOgUz6uKGTNZKsVYdoLHK5tyq4j3NYQjjTcqOiSj4vxnQ==", "blog_post"=>{"title"=>"dewdewd", "category"=>"Lunch", "location"=>"Frank", "description"=>"dede", "rating"=>"4"}, "commit"=>"Create A New Blog Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:54
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:54
+Redirected to http://localhost:3000/blog_posts/new
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-16 19:41:26 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (30.7ms)
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-16 19:41:29 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:5
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:27
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  Rendered blog_posts/index.html.haml within layouts/application (54.9ms)
+Completed 200 OK in 99ms (Views: 93.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-16 19:44:01 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:5
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:27
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  Rendered blog_posts/index.html.haml within layouts/application (39.2ms)
+Completed 200 OK in 59ms (Views: 52.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/blog_posts/new" for ::1 at 2019-04-16 19:44:03 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 40ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/blog_posts" for ::1 at 2019-04-16 19:44:14 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MQmVKWdbrTI5pbK0W5RwN6pNh9NVej20f7fzoF4BRH+7Z71fU2mPabAkdsGkOfsFMndKABqnYrHhigVofLRnHw==", "blog_post"=>{"title"=>"dewdwe", "category"=>"Breakfast", "location"=>"Coop", "description"=>"good", "rating"=>"4"}, "commit"=>"Create A New Blog Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chario/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:55
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:55
+  [1m[36mBlogPost Create (0.6ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Coop"], ["category", "Breakfast"], ["description", "good"], ["title", "dewdwe"], ["rating", 4], ["created_at", "2019-04-16 23:44:14.890888"], ["updated_at", "2019-04-16 23:44:14.890888"], ["user_id", 3]]
+  ↳ app/controllers/blog_posts_controller.rb:55
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/blog_posts_controller.rb:55
+Redirected to http://localhost:3000/blog_posts
+Completed 302 Found in 23ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/blog_posts" for ::1 at 2019-04-16 19:44:14 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:5
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  ↳ app/views/blog_posts/index.html.haml:27
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/index.html.haml:29
+  Rendered blog_posts/index.html.haml within layouts/application (29.1ms)
+Completed 200 OK in 52ms (Views: 47.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blog_posts/6" for ::1 at 2019-04-16 19:44:17 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:10
+  Rendering blog_posts/show.html.haml within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/show.html.haml:11
+  Rendered blog_posts/show.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blog_posts/6" for ::1 at 2019-04-16 19:46:20 -0400
+Processing by BlogPostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT  "blog_posts".* FROM "blog_posts" WHERE "blog_posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/blog_posts_controller.rb:11
+  Rendering blog_posts/show.html.haml within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/blog_posts/show.html.haml:12
+  Rendered blog_posts/show.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 51ms (Views: 26.0ms | ActiveRecord: 1.9ms)
+
+

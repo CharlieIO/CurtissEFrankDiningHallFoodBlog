@@ -2,12 +2,12 @@
 
 %p.navbar-text.pull-right
     - if user_signed_in?
-      %p= "Logged in as " + current_user.email + "."
-      %p.navbar-link= link_to 'Edit profile', edit_user_registration_path
-      %p.navbar-link= link_to "Logout", destroy_user_session_path, method: :delete
+        %p= "Logged in as " + current_user.email + "."
+        %p.navbar-link= link_to 'Edit profile', edit_user_registration_path
+        %p.navbar-link= link_to "Logout", destroy_user_session_path, method: :delete
     - else
-      %p.navbar-link= link_to "Sign up", new_user_registration_path
-      %p.navbar-link= link_to "Login", new_user_session_path
+        %p.navbar-link= link_to "Sign up", new_user_registration_path
+        %p.navbar-link= link_to "Login", new_user_session_path
 
 = form_for @post, :method => :post do |post|
     - if flash[:notice]
@@ -18,7 +18,6 @@
         .col-md-offset-2
         #notice.message= flash[:warning]
         .row
-
     = post.label :title, 'Title'
     = post.text_field :title
     .row

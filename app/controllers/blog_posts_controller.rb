@@ -23,18 +23,28 @@ class BlogPostsController < ApplicationController
 
   def update
     @post = BlogPost.find params[:id]
-    @post.update(create_update_params)
-    if @post.save
-      flash[:notice] = "#{@post.title} was successfully updated!"
+    if (@post.user == current_user)
+      @post.update(create_update_params)
+      if @post.save
+        flash[:notice] = "#{@post.title} was successfully updated!"
+        redirect_to edit_blog_post_path(@post) and return
+      end
+    else
+      flash[:warning] = "You don't have permission to do that."
       redirect_to edit_blog_post_path(@post) and return
     end
   end
 
   def destroy
     @post = BlogPost.find(params[:id])
-    @post.destroy
-    flash[:notice] = "Blog Post '#{@post.title}' deleted!"
-    redirect_to blog_posts_path()
+    if (@post.user == current_user)
+      @post.destroy
+      flash[:notice] = "Blog Post '#{@post.title}' deleted!"
+      redirect_to blog_posts_path()
+    else
+      flash[:warning] = "You don't have permission to do that."
+      redirect_to blog_post_path and return
+    end
   end
 
   def create

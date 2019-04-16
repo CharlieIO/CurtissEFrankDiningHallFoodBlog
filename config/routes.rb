@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :blog_posts
   root "blog_posts#index"
-  root "blog_posts#new"
+  
+  resources :users do
+    resources :blog_posts
+  end
 end

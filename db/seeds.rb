@@ -21,7 +21,7 @@ user2.encrypted_password = '#$taawktljasktlw4aaglj'
 user2.save!
 
 BlogPost.create!(title: "Gross Spinach", description: "watery, and glowing green.", location: "Frank", category: "Dinner", rating: 1, user: user1)
-BlogPost.create!(title: "Clam Chowder", description: "pretty good, feels like i'm back in Boston.", location: "Coop", category: "Lunch", user: user2)
+BlogPost.create!(title: "Clam Chowder", description: "pretty good, feels like i'm back in Boston.", location: "Coop", category: "Lunch", rating: 4, user: user2)
 BlogPost.create!(title: "Lovely Roast Chicken", description: "well seasoned, not dry, even better with bbq sauce.", location: "Library Cafe", category: "Dinner", rating: 5, user: user1)
 BlogPost.create!(title: "Penne a la vodka", description: "ah, just like grandmothers!", location: "Coop", category: "Lunch", rating: 5, user: user2)
 BlogPost.create!(title: "Sketchy Rice Pilaf", description: "dont try it, way too chunky and been sitting out for what seems like days.", location: "Coop", category: "Breakfast", rating: 0, user: user2)

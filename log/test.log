@@ -3526,3 +3526,253 @@ Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:55 -0400
+Processing by BlogPostsController#new as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:55 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 232ms (Views: 222.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@example.com"], ["encrypted_password", "$2a$04$rKFIqFsM3iK8dbAgQq7/guJfhGzCnbbptq4kFQ4hov/.uNrKK/vwG"], ["created_at", "2019-04-19 22:31:55.936658"], ["updated_at", "2019-04-19 22:31:55.936658"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:55 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 28ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"salad", "category"=>"Lunch", "location"=>"Frank", "description"=>"Good", "rating"=>"4"}, "commit"=>"Create A New Blog Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Create (0.6ms)[0m  [1m[32mINSERT INTO "blog_posts" ("location", "category", "description", "title", "rating", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Frank"], ["category", "Lunch"], ["description", "Good"], ["title", "salad"], ["rating", 4], ["created_at", "2019-04-19 22:31:56.035920"], ["updated_at", "2019-04-19 22:31:56.035920"], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/blog_posts
+Completed 302 Found in 12ms (ActiveRecord: 1.0ms)
+Started GET "/blog_posts" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#index as HTML
+  Rendering blog_posts/index.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts"[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "BlogPost"], ["name", "image"], ["LIMIT", 1]]
+  Rendered blog_posts/index.html.haml within layouts/application (39.9ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/shared/_links.html.erb (0.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@example.com"], ["encrypted_password", "$2a$04$zHzGu0WijaNmJ9r6XP/BvOLIX8OSez0nByK/eK2rW2NhnI520FpFa"], ["created_at", "2019-04-19 22:31:56.110023"], ["updated_at", "2019-04-19 22:31:56.110023"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/shared/_links.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@example.com"], ["encrypted_password", "$2a$04$0VRI03ATCyi3Mb1Kc53JmOdaAFmq5stTLJhxYCD8YQ5M8visoTTjW"], ["created_at", "2019-04-19 22:31:56.224389"], ["updated_at", "2019-04-19 22:31:56.224389"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"", "category"=>"", "location"=>"Frank", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@example.com"], ["encrypted_password", "$2a$04$BQemuEfKvRM4MxF2qmPC9.pA03MQGo6LQnos7nLjKJV44ju4hzhmS"], ["created_at", "2019-04-19 22:31:56.344633"], ["updated_at", "2019-04-19 22:31:56.344633"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Squash", "category"=>"", "location"=>"Frank", "description"=>"", "rating"=>""}, "commit"=>"Create A New Blog Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/devise-4.6.2/app/views/devise/sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test1@example.com"], ["encrypted_password", "$2a$04$rbeIrTXrjcN.SH7m7GWaTevXaSeQiPdjvW3zn91dGaw3fokWDVcba"], ["created_at", "2019-04-19 22:31:56.457865"], ["updated_at", "2019-04-19 22:31:56.457865"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test1@example.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+Started POST "/blog_posts" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "blog_post"=>{"title"=>"Squash", "category"=>"", "location"=>"Frank", "description"=>"", "rating"=>"5"}, "commit"=>"Create A New Blog Post"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/blog_posts/new
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/blog_posts/new" for 127.0.0.1 at 2019-04-19 18:31:56 -0400
+Processing by BlogPostsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blog_posts/new.html.haml within layouts/application
+  Rendered blog_posts/new.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m

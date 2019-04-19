@@ -43,6 +43,13 @@ end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
+  email = 'test1@example.com'
+  password = 'colgate'
+  User.new(:email => email, :password => password).save!
+  fill_in "user_email", :with => email
+  fill_in "user_password", :with => password
+  click_button "Log in"
+  visit path_to(page_name)
 end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
@@ -77,7 +84,7 @@ end
 # based on naming conventions.
 #
 
-Given /^these RentalProperties:$/ do |table| #Convert string to regev
+Given /^these BlogPosts:$/ do |table| #Convert string to regev
   # hash = {:title => "",
   # "description" => :description,
   # "price" => :price,
@@ -141,7 +148,7 @@ end
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   if page.respond_to? :should
     page.should have_content(text)
-  else
+  else  
     assert page.has_content?(text)
   end
 end

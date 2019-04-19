@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 BlogPost.delete_all
+User.delete_all
 
 user1 = User.new
 user1.email = 'test1@example.com'

@@ -4,6 +4,17 @@ class BlogPostsController < ApplicationController
 
   def index
     @posts = BlogPost.all
+    if params[:filters]
+      session[:filters] = params[:filters]
+      # redirect_to rental_properties_path(params[:filters])
+      @posts = @posts.filter_on_constraints(params[:filters])
+      # session[:filters] = params[:filters]
+    elsif session[:filters]
+      params[:filters] = session[:filters]
+      # redirect_to rental_properties_path(params[:filters])
+      @posts = @posts.filter_on_constraints(session[:filters])
+      # session.clear
+    end
   end
 
   def show
@@ -77,4 +88,5 @@ private
   def create_update_params
     params.require(:blog_post).permit(:title, :description, :location, :category, :rating, :image, :current_user)
   end
+
 end

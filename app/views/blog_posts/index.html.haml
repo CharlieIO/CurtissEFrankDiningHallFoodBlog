@@ -1,5 +1,6 @@
 #main.container
   %h1.header The Colgate Food Blog
+  
 
   %p.navbar-text.pull-right
     - if user_signed_in?
@@ -14,6 +15,18 @@
     .col-md-offset-2
     #notice.message= flash[:notice]
     .row
+  
+  .row
+  = form_for :filters, :method => :get do |p|
+    =p.label :location, "Location"
+    =p.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One'
+    %br
+    =p.label :category, "Meal Time"
+    =p.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One'
+    %br
+    =submit_tag "Refine the list of blog posts"
+  =link_to 'Clear filters', session.clear
+  .row
 
   %table.table
     %thead

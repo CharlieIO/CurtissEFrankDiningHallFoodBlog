@@ -1,46 +1,89 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/helpers/application_helper.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/user.rb": [
         1,
-        null
-      ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/helpers/blog_posts_helper.rb": [
+        null,
+        null,
         1,
-        null
-      ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/models/blog_post.rb": [
-        1,
-        null
-      ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/models/application_record.rb": [
+        null,
         1,
         1,
         null
       ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/mailers/application_mailer.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/helpers/blog_posts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/controllers/comments_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/blog_post.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/comment.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/controllers/application_controller.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/jobs/application_job.rb": [
         0,
         0
       ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/controllers/blog_posts_controller.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/controllers/blog_posts_controller.rb": [
         0,
         null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
         0,
         null,
         0,
@@ -52,6 +95,13 @@
         0,
         0,
         0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
         0,
         0,
         0,
@@ -62,10 +112,33 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -90,133 +163,198 @@
         0,
         0
       ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/channels/application_cable/channel.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/channels/application_cable/connection.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/channels/application_cable/channel.rb": [
         0,
         0,
-        0,
-        0
-      ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/jobs/application_job.rb": [
         0,
         0
       ]
     },
-    "timestamp": 1554480955
+    "timestamp": 1555707416
   },
   "Cucumber Features": {
     "coverage": {
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/controllers/blog_posts_controller.rb": [
-        1,
-        null,
-        1,
-        4,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        9,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/user.rb": [
         1,
         null,
         null,
         1,
-        5,
         null,
-        5,
-        1,
-        1,
-        4,
-        1,
-        1,
-        3,
-        1,
-        1,
-        2,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        7,
-        null,
-        null
-      ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/controllers/application_controller.rb": [
-        1,
-        null
-      ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/helpers/blog_posts_helper.rb": [
-        1,
-        null
-      ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/models/blog_post.rb": [
-        1,
-        null
-      ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/mailers/application_mailer.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/controllers/blog_posts_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/helpers/blog_posts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/blog_post.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/channels/application_cable/channel.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/comment.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/channels/application_cable/connection.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/controllers/comments_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
         0,
         0,
         0,
         0
       ],
-      "/home/chario/github/swe/CurtissEFrankDiningHallFoodBlog/app/jobs/application_job.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/channels/application_cable/channel.rb": [
+        0,
+        0,
         0,
         0
       ]
     },
-    "timestamp": 1554481386
+    "timestamp": 1555709082
   }
 }

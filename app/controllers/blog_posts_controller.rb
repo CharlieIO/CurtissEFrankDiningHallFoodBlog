@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
 
-  before_action :authenticate_user!, :only=>[:edit, :update, :new, :create, :destroy] 
+  before_action :authenticate_user!, :only=>[:edit, :update, :new, :create, :destroy]
 
   def index
     @posts = BlogPost.all
@@ -9,6 +9,7 @@ class BlogPostsController < ApplicationController
   def show
     @post = BlogPost.find(params[:id])
     @user = @post.user.email
+    @comments = @post.comments
   end
 
   def edit

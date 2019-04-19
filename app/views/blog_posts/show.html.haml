@@ -1,6 +1,16 @@
 #main.container
     %h1.header The Colgate Food Blog
 
+    %p.navbar-text.pull-right
+    - if user_signed_in?
+        %p= "Logged in as " + current_user.email + "."
+        %p.navbar-link= link_to 'Edit profile', edit_user_registration_path
+        %p.navbar-link= link_to "Logout", destroy_user_session_path, method: :delete
+    - else
+        %p.navbar-link= link_to "Sign up", new_user_registration_path
+        %p.navbar-link= link_to "Login", new_user_session_path
+
+
     - if flash[:notice]
         .col-md-offset-2
         #notice.message= flash[:notice]
@@ -30,6 +40,25 @@
 
     %br
     %br
+
+%br
+%br
+#comments.row
+    %h3 Comments
+    %ul
+    -@comments.each do |comment|
+        =render :partial => comment
+
+.row
+    -if user_signed_in?
+        =form_with(id: :comment_form, model: Comment.new, url: comments_path(@post), data: { type: :html } ) do |f|
+            =f.label :comment
+            =f.text_area :comment, :id => "commentbox"
+            =f.submit "Add comment"
+    -else
+        %p Sign in to post a comment.
+%br
+
 
     .row
         .col-md-offset-1

@@ -43,13 +43,13 @@ end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
-  email = 'test1@example.com'
-  password = 'colgate'
-  User.new(:email => email, :password => password).save!
-  fill_in "user_email", :with => email
-  fill_in "user_password", :with => password
-  click_button "Log in"
-  visit path_to(page_name)
+  # email = 'test1@example.com'
+  # password = 'colgate'
+  # User.new(:email => email, :password => password).save!
+  # fill_in "user_email", :with => email
+  # fill_in "user_password", :with => password
+  # click_button "Log in"
+  # visit path_to(page_name)
 end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
@@ -61,10 +61,12 @@ When /^(?:|I )press "([^"]*)"$/ do |button|
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
+  # byebug
   click_link(link)
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+  # byebug
   fill_in(field, :with => value)
 end
 
@@ -85,47 +87,43 @@ end
 #
 
 Given /^these BlogPosts:$/ do |table| #Convert string to regev
-  # hash = {:title => "",
-  # "description" => :description,
-  # "price" => :price,
-  # "bedrooms" => :bedrooms,
-  # "beds" => :beds,
-  # "maxpersons" => :maxpersons,
-  # "bathrooms" => :bathrooms,
-  # "pets_allowed" => :pets_allowed,
-  # "address" => :address}
-
-  hash = {}
-
-  t = table.hashes
-  t.each do |row|
-    row.each do |k, v|
-      if k.eql? "Title"
-        hash[:title] = v
-        # byebug
-      elsif k.eql? "Category"
-        hash[:category] = v
-      elsif k.eql? "Location"
-        hash[:location] = v
-      elsif k.eql? "Description"
-        hash[:description] = v
-      elsif k.eql? "Rating"
-        hash[:rating] = v
-      end
-    end
-    BlogPost.create!(hash)
+  # byebug
+  table.hashes.each do |p|
+    BlogPost.create!(p)
   end
+  # hash = {}
+
+  # t = table.hashes
+  # t.each do |row|
+  #   row.each do |k, v|
+  #     if k.eql? "Title"
+  #       hash[:title] = v
+  #       # byebug
+  #     elsif k.eql? "Category"
+  #       hash[:category] = v
+  #     elsif k.eql? "Location"
+  #       hash[:location] = v
+  #     elsif k.eql? "Description"
+  #       hash[:description] = v
+  #     elsif k.eql? "Rating"
+  #       hash[:rating] = v
+  #     end
+  #   end
+  #   BlogPost.create!(hash)
+  # end
 end
 
 
 
 When /^(?:|I )fill in the following:$/ do |fields|
+  # byebug
   fields.rows_hash.each do |name, value|
     fill_in(name, :with => value)
   end
 end
 
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
+  # byebug
   select(value, :from => field)
 end
 
@@ -318,4 +316,20 @@ Then("I should see that {string} has a Location of {string}") do |title, locatio
   else
     assert page.find('tr', text:title).has_content?(location)
   end
+end
+
+Given(/^I am an authenticated user with email: "(.*)"$/) do |email|
+  # byebug
+  email = email
+  password = 'colgate'
+
+  visit '/users/sign_up'
+
+  fill_in "Email", :with => email
+  fill_in "user_password", :with => password
+  fill_in "Password confirmation", :with => password
+
+  click_button "Sign up"
+  visit '/blog_posts'
+  # byebug
 end

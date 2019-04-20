@@ -5,13 +5,20 @@ Feature: Delete a Blog Post
 
 
   Background: the site already has an existing blog post
-    Given these RentalProperties:
-      | Title          | Category            | Location | Description                      | Rating       |
-      | Gross Spinach  | Dinner              | Frank    | watery, and glowing green.       | 1/5 Stars    |
-
-
-  Scenario: Delete a blog post
     Given I am on the blog posts page
-    When I follow "Gross Spinach"
-    And I follow "Delete post"
-    Then I should see "Blog Post 'Gross Spinach' deleted!"
+    Given I am an authenticated user with email: "me@email.com"
+    Given these BlogPosts:
+      | title          | category            | location | description                      | rating       | user_id |
+      | Gross Spinach  | Dinner              | Frank    | watery, and glowing green.       | 1/5 Stars    | 1       |
+
+
+    Scenario: Delete a blog post
+      Given I am on the blog posts page
+      When I follow "Gross Spinach"
+      And I follow "Delete post"
+      And I follow "Sign up"
+      And I fill in "Email" with "me@email.com"
+      And I fill in "user_password" with "colgate"
+      And I fill in "Password confirmation" with "colgate"
+      And I press "Sign up"
+      Then I should not see "Gross Spinach"

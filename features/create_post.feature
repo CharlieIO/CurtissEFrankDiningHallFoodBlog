@@ -4,7 +4,13 @@ Feature: Create a new Blog Post
   I want to be able to add a new blog post.
 
   Scenario: Create a new blog post
-    Given I am on the create a new blog post page
+    Given I am an authenticated user with email: "bob@email.com"
+    When I follow "Create A New Blog Post"
+    And I follow "Sign up"
+    And I fill in "Email" with "me@email.com"
+    And I fill in "user_password" with "colgate"
+    And I fill in "Password confirmation" with "colgate"
+    And I press "Sign up"
     When I fill in the following:
       | Title                     | salad                     |
       | How was it?               | Good                      |
@@ -20,7 +26,13 @@ Feature: Create a new Blog Post
     And I should see that "salad" has a Location of "Frank"
 
   Scenario: Try to create a new blog post without filling out form
-    Given I am on the create a new blog post page
+    Given I am an authenticated user with email: "bob@email.com"
+    When I follow "Create A New Blog Post"
+    And I follow "Sign up"
+    And I fill in "Email" with "me@email.com"
+    And I fill in "user_password" with "colgate"
+    And I fill in "Password confirmation" with "colgate"
+    And I press "Sign up"
     When I fill in the following:
       | Title                     |                           |
       | How was it?               |                           |
@@ -31,7 +43,13 @@ Feature: Create a new Blog Post
     And I should see "No Location Provided - Failed to Create Blog Post."
 
   Scenario: Try to create a new blog post without filling out form
-    Given I am on the create a new blog post page
+    Given I am an authenticated user with email: "bob@email.com"
+    When I follow "Create A New Blog Post"
+    And I follow "Sign up"
+    And I fill in "Email" with "me@email.com"
+    And I fill in "user_password" with "colgate"
+    And I fill in "Password confirmation" with "colgate"
+    And I press "Sign up"
     When I fill in the following:
       | Title                     |                           |
       | How was it?               |                           |
@@ -44,25 +62,37 @@ Feature: Create a new Blog Post
 
 
     Scenario: Try to create a new blog post without filling out form
-      Given I am on the create a new blog post page
-      When I fill in the following:
-        | Title                     | Squash                    |
-        | How was it?               |                           |
-        | Rating                    |                           |
+    Given I am an authenticated user with email: "bob@email.com"
+    When I follow "Create A New Blog Post"
+    And I follow "Sign up"
+    And I fill in "Email" with "me@email.com"
+    And I fill in "user_password" with "colgate"
+    And I fill in "Password confirmation" with "colgate"
+    And I press "Sign up"
+    When I fill in the following:
+      | Title                     | squash                    |
+      | How was it?               |                           |
+      | Rating                    |                           |
 
-      And I select "Frank" from "Location"
-      And I press "Create A New Blog Post"
-      Then I should be on the create a new blog post page
-      And I should see "No Rating Provided - Failed to Create Blog Post."
+    And I select "Frank" from "Location"
+    And I press "Create A New Blog Post"
+    Then I should be on the create a new blog post page
+    And I should see "No Rating Provided - Failed to Create Blog Post."
 
     Scenario: Try to create a new blog post without filling out form
-      Given I am on the create a new blog post page
-      When I fill in the following:
-        | Title                     | Squash                    |
-        | How was it?               |                           |
-        | Rating                    | 5                         |
+    Given I am an authenticated user with email: "bob@email.com"
+    When I follow "Create A New Blog Post"
+    And I follow "Sign up"
+    And I fill in "Email" with "me@email.com"
+    And I fill in "user_password" with "colgate"
+    And I fill in "Password confirmation" with "colgate"
+    And I press "Sign up"
+    When I fill in the following:
+      | Title                     | squash                    |
+      | How was it?               |                           |
+      | Rating                    | 5                         |
 
-      And I select "Frank" from "Location"
-      And I press "Create A New Blog Post"
-      Then I should be on the create a new blog post page
-      And I should see "No Meal Time Provided - Failed to Create Blog Post."
+    And I select "Frank" from "Location"
+    And I press "Create A New Blog Post"
+    Then I should be on the create a new blog post page
+    And I should see "No Meal Time Provided - Failed to Create Blog Post."

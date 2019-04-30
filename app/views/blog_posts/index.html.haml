@@ -3,9 +3,8 @@
 
 #main.container
   -# %script{:src => "CURTISSEFRANKDININGHALLFOODBLOG/app/assets/javascripts/blog_posts.js"}
-  
 
-  = javascript_include_tag('blog_posts.js')
+
   %h1.header The Colgate Food Blog
   %p.scrollToTop{:href => "#"}
     %i.fa.fa-angle-up
@@ -25,7 +24,7 @@
     .notice
       #notice.message= flash[:notice]
     .row
-  
+
   .row
   = form_for :filters, :method => :get do |p|
     =p.label :location, "Location", :class => 'loc'
@@ -41,7 +40,7 @@
   %table.table
     %thead
       %tr
-        %th 
+        %th
         %th Title
         %th Category
         %th Location

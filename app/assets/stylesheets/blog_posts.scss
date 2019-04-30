@@ -154,6 +154,24 @@ t2.body {
 
 }
 
+.scrollToTop {
+    margin: 0;
+    position: fixed;
+    bottom: 8.5%;
+    right: 0;
+    z-index: 100;
+    display: none;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(100, 193, 151, .7);
+    padding: 10px 20px 10px 10px;
+    font-size: 20px;
+}
+.scrollToTop:hover {
+    background-color: rgba(100, 193, 151, 1);
+    color: #ffffff;
+    text-decoration: none;
+}
 
 // .title {
 //     position: absolute; top: 50; left: 50

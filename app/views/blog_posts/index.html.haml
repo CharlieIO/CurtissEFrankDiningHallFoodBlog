@@ -1,6 +1,15 @@
+-# %script{:src => "https://code.jquery.com/jquery-3.4.0.min.js", :type => "text/javascript"}
+%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"}
+
 #main.container
-  %h1.header The Colgate Food Blog
+  -# %script{:src => "CURTISSEFRANKDININGHALLFOODBLOG/app/assets/javascripts/blog_posts.js"}
   
+
+  = javascript_include_tag('blog_posts.js')
+  %h1.header The Colgate Food Blog
+  %p.scrollToTop{:href => "#"}
+    %i.fa.fa-angle-up
+    Back to top
 
   %p.navbar-text.pull-right
     - if user_signed_in?

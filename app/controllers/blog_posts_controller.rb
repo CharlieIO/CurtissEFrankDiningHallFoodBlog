@@ -4,6 +4,7 @@ class BlogPostsController < ApplicationController
 
   def index
     @posts = BlogPost.all
+    @user = current_user
     if params[:filters]
       session[:filters] = params[:filters]
       # redirect_to rental_properties_path(params[:filters])

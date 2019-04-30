@@ -1,42 +1,50 @@
-%h2 Create A New Blog Post
+%h2.create_head Create A New Blog Post
 
 %p.navbar-text.pull-right
     - if user_signed_in?
-        %p= "Logged in as " + current_user.email + "."
-        %p.navbar-link= link_to 'Edit profile', edit_user_registration_path
-        %p.navbar-link= link_to "Logout", destroy_user_session_path, method: :delete
+        %p.identity= "Logged in as " + current_user.email + "."
+        %p.navbar-link_up= link_to 'Edit profile', edit_user_registration_path
+        %p.navbar-link_in= link_to "Logout", destroy_user_session_path, method: :delete
     - else
-        %p.navbar-link= link_to "Sign up", new_user_registration_path
-        %p.navbar-link= link_to "Login", new_user_session_path
+        %p.navbar-link_up= link_to "Sign up", new_user_registration_path
+        %p.navbar-link_in= link_to "Login", new_user_session_path
 
-= form_for @post, :method => :post do |post|
-    - if flash[:notice]
-        .col-md-offset-2
-        #notice.message= flash[:notice]
+%t2.body
+    = form_for @post, :method => :post do |post|
+        - if flash[:notice]
+            .col-md-offset-2
+            #notice.message= flash[:notice]
+            .row
+        - if flash[:warning]
+            .col-md-offset-2
+            #notice.message= flash[:warning]
+            .row
+        
+        = post.label :title, 'Title', :class => 'title1'
         .row
-    - if flash[:warning]
-        .col-md-offset-2
-        #notice.message= flash[:warning]
+        = post.text_field :title, :class => 'title2'
         .row
-    = post.label :title, 'Title'
-    = post.text_field :title
-    .row
-    = post.label :category, 'Meal Time'
-    = post.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One'
-    .row
-    = post.label :location, 'Location'
-    = post.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One'
-    .row
-    = post.label :description, 'How was it?'
-    = post.text_field :description
-    .row
-    = post.label :rating, 'Rating'
-    = post.number_field :rating, in: 0..5, step: 1
-    .row
-    =post.label :image, "Image"
-    =post.file_field :image, accept: "image/png,image/gif,image/jpeg"
-    .row
-    = submit_tag "Create A New Blog Post"
-    .row
-    .row
-    = link_to "Back To All Blog Posts", blog_posts_path()
+        = post.label :category, 'Meal Time', :class => 'cat1'
+        .row
+        = post.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One', :class => 'cat2'
+        .row
+        = post.label :location, 'Location', :class => 'loc1'
+        .row
+        = post.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One', :class => 'loc2'
+        .row
+        = post.label :description, 'How was it?', :class => 'desc1'
+        .row
+        = post.text_field :description, :class => 'desc2'
+        .row
+        = post.label :rating, 'Rating', :class => 'rate1'
+        .row
+        = post.number_field :rating, in: 0..5, step: 1, :class => 'rate2'
+        .row
+        =post.label :image, "Image", :class => 'img1'
+        .row
+        =post.file_field :image, accept: "image/png,image/gif,image/jpeg", :class => 'img2'
+        .row
+        = submit_tag "Create A New Blog Post", :class => 'submit'
+        .row
+        .row
+        = link_to "Back To All Blog Posts", blog_posts_path(), :class => 'back'

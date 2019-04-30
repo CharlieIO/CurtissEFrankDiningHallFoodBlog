@@ -4,33 +4,35 @@
 
   %p.navbar-text.pull-right
     - if user_signed_in?
-      %p= "Logged in as " + current_user.email + "."
-      %p.navbar-link= link_to 'Edit profile', edit_user_registration_path
-      %p.navbar-link= link_to "Logout", destroy_user_session_path, method: :delete
+      %p.identity= "Logged in as " + current_user.email + "."
+      %p.navbar-link_up= link_to 'Edit profile', edit_user_registration_path
+      %p.navbar-link_in= link_to "Logout", destroy_user_session_path, method: :delete
     - else
-      %p.navbar-link= link_to "Sign up", new_user_registration_path
-      %p.navbar-link= link_to "Login", new_user_session_path
+      %p.navbar-link_up= link_to "Sign up", new_user_registration_path
+      %p.navbar-link_in= link_to "Login", new_user_session_path
 
   - if flash[:notice]
     .col-md-offset-2
-    #notice.message= flash[:notice]
+    .notice
+      #notice.message= flash[:notice]
     .row
   
   .row
   = form_for :filters, :method => :get do |p|
-    =p.label :location, "Location"
+    =p.label :location, "Location", :class => 'loc'
     =p.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One'
-    %br
-    =p.label :category, "Meal Time"
+    -# %br
+    =p.label :category, "Meal Time", class: 'cat'
     =p.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One'
-    %br
-    =submit_tag "Refine the list of blog posts"
-  =link_to 'Clear filters', session.clear
+    -# %br
+    =submit_tag "Refine the list of blog posts", :class => 'submit_filter'
+    =link_to 'Clear filters', session.clear, :class => 'clear_filter'
   .row
 
   %table.table
     %thead
       %tr
+        %th 
         %th Title
         %th Category
         %th Location
@@ -39,11 +41,11 @@
     %tbody
       -@posts.each do |post|
         %tr.post
-          %td.image= image_tag post.image.attached? ? post.image.variant(resize: "100x100^") : 'noimg.png'
+          %td.image= image_tag post.image.attached? ? post.image.variant(resize: "150x150^") : 'noimg.png'
           %td.title= link_to "#{post.title}", blog_post_path(post)
-          %td.category= post.category
-          %td.location= post.location
-          %td.description= truncate(post.description, length: 30)
+          %td.category= "#{post.category}"
+          %td.location= "#{post.location}"
+          %td.description= "#{truncate(post.description, length: 30)}"
           %td.rating= "#{post.rating}" + "/5 Stars"
 
     %tr.new

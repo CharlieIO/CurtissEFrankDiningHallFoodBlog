@@ -5,6 +5,8 @@ ruby '2.6.0'
 
 gem 'devise'
 
+gem 'shareable'
+
 gem 'haml', '~> 5.0.4'
 gem 'haml-rails'
 gem 'pg', "~> 0.21.0"

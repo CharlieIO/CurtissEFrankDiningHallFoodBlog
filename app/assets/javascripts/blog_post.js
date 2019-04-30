@@ -17,25 +17,25 @@ var blog_posts = (function() {
     };
 
 })();
-$(document).ready(function() {
+$(window).load(function() {
     var scrollup = (function() {
         
             
-            if (jQuery(this).scrollTop() < 100) {
-                jQuery(".scrollToTop").fadeOut(0);
-            }
+            // if (jQuery(this).scrollTop() < 100) {
+            //     jQuery(".scrollToTop").fadeOut(0);
+            // }
 
-            else if ((document.readyState === 'complete') && (jQuery(this).scrollTop() >= 300)) {
-                jQuery(".scrollToTop").fadeIn(1000);
-                jQuery(".scrollToTop").click(function() {
-                    jQuery('html, body').animate({scrollTop : 0}, 50);
-                });
-                    // jQuery('html, body').animate({scrollTop : 0}, 500);
-                
-                // else {
-                //     return false;
-                // }
-            }
+        // if (jQuery(this).scrollTop() >= 300) {
+        jQuery(".scrollToTop").fadeIn(1000);
+        jQuery(".scrollToTop").click(function() {
+            jQuery('html, body').animate({scrollTop : 0}, 50);
+        });
+                // jQuery('html, body').animate({scrollTop : 0}, 500);
+            
+            // else {
+            //     return false;
+            // }
+        // }
         
     })();
 });

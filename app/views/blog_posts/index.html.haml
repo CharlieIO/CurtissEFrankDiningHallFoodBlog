@@ -21,8 +21,14 @@
 
   - if flash[:notice]
     .col-md-offset-2
-    .notice
-      #notice.message= flash[:notice]
+    #notice.message
+      %span= flash[:notice]
+    .row
+
+   - if flash[:warning]
+    .col-md-offset-2
+    #notice.message_warning
+        %span= flash[:warning]
     .row
 
   .row

@@ -3,9 +3,23 @@
 
 #main.container
   -# %script{:src => "CURTISSEFRANKDININGHALLFOODBLOG/app/assets/javascripts/blog_posts.js"}
+  - if flash[:notice]
+    .col-md-offset-2
+    #notice.message
+      %span= flash[:notice]
+    .row
 
+  - if flash[:warning]
+    .col-md-offset-2
+    #notice.message_warning
+      %span= flash[:warning]
+    .row
 
   %h1.header The Colgate Food Blog
+
+  %button.new{:id => "newbutton"}= "New Post"
+  -# %p.new= link_to "Create A New Blog Post", new_blog_post_path()
+
   %p.scrollToTop{:href => "#"}
     %i.fa.fa-angle-up
     Back to top
@@ -19,17 +33,7 @@
       %p.navbar-link_up= link_to "Sign up", new_user_registration_path
       %p.navbar-link_in= link_to "Login", new_user_session_path
 
-  - if flash[:notice]
-    .col-md-offset-2
-    #notice.message
-      %span= flash[:notice]
-    .row
 
-  - if flash[:warning]
-    .col-md-offset-2
-    #notice.message_warning
-      %span= flash[:warning]
-    .row
 
   .row
   = form_for :filters, :method => :get do |p|
@@ -62,5 +66,4 @@
           %td.description= "#{truncate(post.description, length: 30)}"
           %td.rating= "#{post.rating}" + "/5 Stars"
 
-    %tr.new
-      %th.new= link_to "Create A New Blog Post", new_blog_post_path()
+    

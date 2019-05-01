@@ -22,24 +22,10 @@ $(blog_posts.init);
 
 $(window).on('load', function() {
     var scrollup = (function() {
-        
-            
-            // if (jQuery(this).scrollTop() < 100) {
-            //     jQuery(".scrollToTop").fadeOut(0);
-            // }
-
-        // if (jQuery(this).scrollTop() >= 300) {
         jQuery(".scrollToTop").fadeIn(1000);
         jQuery(".scrollToTop").click(function() {
             jQuery('html, body').animate({scrollTop : 0}, 50);
-        });
-                // jQuery('html, body').animate({scrollTop : 0}, 500);
-            
-            // else {
-            //     return false;
-            // }
-        // }
-        
+        });  
     })();
 });
 
@@ -67,6 +53,20 @@ $(window).on('load', function() {
             });
         };
     })();
+});
+
+$(window).on('load', function() {
+    if (document.getElementById("newbutton")) {
+        document.getElementById("newbutton").onclick = function () {
+            location.href = "/blog_posts/new";
+        };
+    }
+
+    if (document.getElementById("headertitle")) {
+        document.getElementById("headertitle").onclick = function () {
+            location.href = "/blog_posts/";
+        };
+    };
 });
 // $(noticeButton);
 // $(scrollup);

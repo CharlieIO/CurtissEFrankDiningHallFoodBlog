@@ -1,3 +1,14 @@
+- if flash[:notice]
+    .col-md-offset-2
+    #notice.message
+        %span= flash[:notice]
+    .row
+- if flash[:warning]
+    .col-md-offset-2
+    #notice.message_warning
+        %span= flash[:warning]
+    .row
+
 %h2.create_head Create A New Blog Post
 
 %p.navbar-text.pull-right
@@ -10,16 +21,8 @@
         %p.navbar-link_in= link_to "Login", new_user_session_path
 
 %t2.body
+    %span
     = form_for @post, :method => :post do |post|
-        - if flash[:notice]
-            .col-md-offset-2
-            #notice.message= flash[:notice]
-            .row
-        - if flash[:warning]
-            .col-md-offset-2
-            #notice.message= flash[:warning]
-            .row
-        
         = post.label :title, 'Title', :class => 'title1'
         .row
         = post.text_field :title, :class => 'title2'

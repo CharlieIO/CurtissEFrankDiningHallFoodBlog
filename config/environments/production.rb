@@ -19,8 +19,8 @@ Rails.application.configure do
   # config.require_master_key = true
 
   # Make sure images (background) compiled for heroku
-  config.serve_static_assets = true
-  config.assets.compile = true
+  # config.serve_static_assets = true
+  # config.assets.compile = true
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.

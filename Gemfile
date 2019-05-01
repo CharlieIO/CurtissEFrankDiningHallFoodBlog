@@ -5,9 +5,10 @@ ruby '2.6.0'
 
 gem 'devise'
 
+gem 'shareable'
+
 gem 'haml', '~> 5.0.4'
 gem 'haml-rails'
-gem 'pg', "~> 0.21.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -74,6 +75,7 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg', "~> 0.21.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

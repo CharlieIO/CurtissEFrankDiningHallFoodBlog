@@ -49,7 +49,7 @@
     =form_for :filters, :method => :get do |p|
       %div.filterout
         =p.label :location, "Location", :class => 'loc'
-        =p.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One', :class => 'loc2'
+        =p.select :location, ['Frank', 'Coop', 'Library Cafe', "Donovan's"], prompt: 'Select One', :class => 'loc2'
         -# %br
         =p.label :category, "Meal Time", class: 'cat'
         =p.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One', class: 'cat2'

@@ -14,7 +14,7 @@ class BlogPost < ApplicationRecord
       operator = operator_hash[symbol]
       if !operator.nil?
         if !value.to_s.empty?
-          records = records.where("#{symbol.to_s} #{operator} ?", value)
+          records = records.where("#{symbol.to_s} #{operator} ?", value.to_s)
         end
       end
     end

@@ -1,4 +1,8 @@
 %h2 Edit Blog Post
+.h5
+    #myBar.progress-bar
+-# .progress-container
+
 
 %p.navbar-text.pull-right
 - if user_signed_in?
@@ -20,6 +24,8 @@
         #notice.message_warning
             %span= flash[:warning]
         .row
+    
+    -# %p.curr_img= post.image.variant(resize: "500x500^") 
 
     = post.label :title, 'Title'
     = post.text_field :title

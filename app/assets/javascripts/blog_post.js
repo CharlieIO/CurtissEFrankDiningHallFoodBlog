@@ -29,6 +29,12 @@ $(window).on('load', function() {
     })();
 });
 
+// $(window).on('load', function() {
+//     var wrap = (function(){
+//         $('.identity, .navbar-link_in, .navbar-link_up').wrapAll('<div class="wrapper"/>')
+//     })();
+// });
+
 
 $(window).on('load', function() {
     var noticeButton = (function() {

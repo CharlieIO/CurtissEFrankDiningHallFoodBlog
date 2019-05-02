@@ -24,7 +24,7 @@
       %span= flash[:warning]
     .row
 
-  %h1.header The Colgate Food Blog
+  %h1.header To Be Frank Food Blog
 
   %button.new{:id => "newbutton"}= link_to "New Post", new_blog_post_path()
   -# %p.new= link_to "Create A New Blog Post", new_blog_post_path()
@@ -39,8 +39,9 @@
       %p.navbar-link_up= link_to 'Edit profile', edit_user_registration_path
       %p.navbar-link_in= link_to "Logout", destroy_user_session_path, method: :delete
     - else
-      %p.navbar-link_up= link_to "Sign up", new_user_registration_path
-      %p.navbar-link_in= link_to "Login", new_user_session_path
+      %body
+        .navbar-link_up= link_to "Sign up", new_user_registration_path
+        .navbar-link_in= link_to "Login", new_user_session_path
 
 
 

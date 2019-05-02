@@ -36,34 +36,37 @@
 
 
   .row
-  = form_for :filters, :method => :get do |p|
-    =p.label :location, "Location", :class => 'loc'
-    =p.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One'
-    -# %br
-    =p.label :category, "Meal Time", class: 'cat'
-    =p.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One'
-    -# %br
-    =submit_tag "Refine the list of blog posts", :class => 'submit_filter'
-    =link_to 'Clear filters', session.clear, :class => 'clear_filter'
-  .row
+  %p.filter
+    =form_for :filters, :method => :get do |p|
+      %div.filterout
+        =p.label :location, "Location", :class => 'loc'
+        =p.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One', :class => 'loc2'
+        -# %br
+        =p.label :category, "Meal Time", class: 'cat'
+        =p.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One', class: 'cat2'
+        -# %br
+        =submit_tag "Refine the list of blog posts", :class => 'submit_filter'
+        %td.row=link_to 'Clear filters', session.clear, :class => 'clear_filter'
+    .row
 
   %table.table
     %thead
       %tr
         %th
-        %th Title
-        %th Category
-        %th Location
-        %th Description
-        %th Rating
+        -# %th Title
+        -# %th Category
+        -# %th Location
+        -# %th Description
+        -# %th Rating
     %tbody
       -@posts.each do |post|
-        %tr.post
-          %td.image= image_tag post.image.attached? ? post.image.variant(resize: "150x150^") : 'noimg.png'
-          %td.title= link_to "#{post.title}", blog_post_path(post)
-          %td.category= "#{post.category}"
-          %td.location= "#{post.location}"
-          %td.description= "#{truncate(post.description, length: 30)}"
-          %td.rating= "#{post.rating}" + "/5 Stars"
+        %p.post
+          %p.image= link_to image_tag(post.image.attached? ? post.image.variant(resize: "400x400^") : 'noimg.png'), blog_post_path(post)
+          .title= "#{post.title}"
+          .category= "#{post.category}"
+          .location= "#{post.location}"
+          .cat_loc= "#{post.category} @ #{post.location}"
+          .description= "#{truncate(post.description, length: 30)}"
+          .rating= "#{post.rating}" + "/5 Stars"
 
     

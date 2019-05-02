@@ -56,17 +56,19 @@ $(window).on('load', function() {
 });
 
 $(window).on('load', function() {
-    if (document.getElementById("newbutton")) {
-        document.getElementById("newbutton").onclick = function () {
-            location.href = "/blog_posts/new";
-        };
-    }
+    var newblogbutton = (function() {
+        if (document.getElementById("newbutton")) {
+            document.getElementById("newbutton").onclick = function () {
+                location.href = "/blog_posts/new";
+            };
+        }
 
-    if (document.getElementById("headertitle")) {
-        document.getElementById("headertitle").onclick = function () {
-            location.href = "/blog_posts/";
+        if (document.getElementById("headertitle")) {
+            document.getElementById("headertitle").onclick = function () {
+                location.href = "/blog_posts/";
+            };
         };
-    };
+    })();
 });
 // $(noticeButton);
 // $(scrollup);

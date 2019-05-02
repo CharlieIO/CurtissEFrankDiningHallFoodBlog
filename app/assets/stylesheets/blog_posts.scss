@@ -11,6 +11,32 @@ body {
         image-url('/assets/background.png'); 
     background-size: 100%;
   }
+div.linkbox {
+    display: block;
+    margin-top: 10%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #999;
+    // box-shadow: 0px 10px black;
+}
+.moodle {
+    display: inline-block;
+    text-align: center;
+}
+.portal {
+    display: inline-block;
+    text-align: center; 
+}
+
+.library {
+    display: inline-block;
+    text-align: center;
+}
+
+.news  {
+    display: inline-block;
+    text-align: center;
+}
 
 
 h1.header {

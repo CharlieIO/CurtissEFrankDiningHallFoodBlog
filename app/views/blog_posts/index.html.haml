@@ -2,6 +2,12 @@
 %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"}
 
 #main.container
+  %div.linkbox
+    %p.moodle= link_to "Moodle", "https://moodle.colgate.edu/login/index.php", target: :_blank
+    %p.portal= link_to "Portal", "https://portal.colgate.edu/uPortal/f/welcome/normal/render.uP", target: :_blank
+    %p.library= link_to "Library", "https://cul.colgate.edu/", target: :_blank
+    %p.news= link_to "News", "https://news.colgate.edu/", target: :_blank
+
   .h5
     .progress-container
       #myBar.progress-bar

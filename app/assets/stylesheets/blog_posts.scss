@@ -54,6 +54,10 @@ h1.header {
     position: relative;
 }
 
+h1.header:hover {
+    cursor: pointer;
+}
+
 .navbar-link_up {
     position: absolute; top: 25px; right: 15px; width: 100px; text-align: right
 }
@@ -261,12 +265,19 @@ t2.body {
     box-shadow: 0px 0px 50px black;
 }
 
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none!important;
+    color: black;
+}
+
 button.new {
     padding: 15px 25px;
     font-size: 30px;
     font-style: italic;
     font-weight: bolder;
     text-align: center;
+    outline: none!important;
+
 
     cursor: pointer;
 

@@ -26,7 +26,7 @@
 
   %h1.header The Colgate Food Blog
 
-  %button.new{:id => "newbutton"}= "New Post"
+  %button.new{:id => "newbutton"}= link_to "New Post", new_blog_post_path()
   -# %p.new= link_to "Create A New Blog Post", new_blog_post_path()
 
   %p.scrollToTop{:href => "#"}

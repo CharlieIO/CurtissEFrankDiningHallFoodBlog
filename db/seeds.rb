@@ -12,13 +12,13 @@ User.delete_all
 user1 = User.new
 user1.email = 'test1@example.com'
 user1.password = "colgate"
-user1.encrypted_password = '#$taawktljasktlw4aaglj'
+# user1.encrypted_password = '#$taawktljasktlw4aaglj'
 user1.save!
 
 user2 = User.new
 user2.email = 'test2@example.com'
 user2.password = 'colgate'
-user2.encrypted_password = '#$taawktljasktlw4aaglj'
+# user2.encrypted_password = '#$taawktljasktlw4aaglj'
 user2.save!
 
 b1 = BlogPost.create!(title: "Gross Spinach", description: "watery, and glowing green.", location: "Frank", category: "Dinner", rating: 1, user: user1)

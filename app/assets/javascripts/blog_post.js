@@ -18,6 +18,7 @@ var blog_posts = (function() {
 
 })();
 
+<<<<<<< Updated upstream
 $(blog_posts.init);
 
 $(window).on('load', function() {
@@ -88,6 +89,28 @@ function scrollStat() {
 }
 // $(noticeButton);
 // $(scrollup);
+=======
+var scrollup = (function() {
+    if (document.readyState !== 'complete') return;
+    else if (jQuery(this).scrollTop() < 100) {
+        jQuery(".scrollToTop").fadeOut(0);
+    }
+
+    else if ((document.readyState === 'complete') && (jQuery(this).scrollTop() >= 100)) {
+        jQuery(".scrollToTop").fadeIn(1000);
+        jQuery(".scrollToTop").click(function() {
+            jQuery('html, body').animate({scrollTop : 0}, 50);
+        });
+            // jQuery('html, body').animate({scrollTop : 0}, 500);
+        
+        // else {
+        //     return false;
+        // }
+    }
+})();
+
+$(scrollup);
+>>>>>>> Stashed changes
 
 // console.log()
 // $(document).ready(function() {

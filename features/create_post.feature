@@ -5,7 +5,7 @@ Feature: Create a new Blog Post
 
   Scenario: Create a new blog post
     Given I am an authenticated user with email: "bob@email.com"
-    When I follow "Create A New Blog Post"
+    When I follow "New Post"
     And I follow "Sign up"
     And I fill in "Email" with "me@email.com"
     And I fill in "user_password" with "colgate"
@@ -14,20 +14,20 @@ Feature: Create a new Blog Post
     When I fill in the following:
       | Title                     | salad                     |
       | How was it?               | Good                      |
-      | Rating                    | 4                         |
+      | Rating                    | 2                         |
 
     When I select "Lunch" from "Meal Time"
     When I select "Frank" from "Location"
     When I press "Create A New Blog Post"
     Then I should be on the blog posts page
     And I should see "salad"
-    And I should see that "salad" has a rating of 4
+    And I should see that "salad" has a rating of 2
     And I should see that "salad" has a Meal Time of "Lunch"
     And I should see that "salad" has a Location of "Frank"
 
   Scenario: Try to create a new blog post without filling out form
     Given I am an authenticated user with email: "bob@email.com"
-    When I follow "Create A New Blog Post"
+    When I follow "New Post"
     And I follow "Sign up"
     And I fill in "Email" with "me@email.com"
     And I fill in "user_password" with "colgate"
@@ -44,7 +44,7 @@ Feature: Create a new Blog Post
 
   Scenario: Try to create a new blog post without filling out form
     Given I am an authenticated user with email: "bob@email.com"
-    When I follow "Create A New Blog Post"
+    When I follow "New Post"
     And I follow "Sign up"
     And I fill in "Email" with "me@email.com"
     And I fill in "user_password" with "colgate"
@@ -63,7 +63,7 @@ Feature: Create a new Blog Post
 
     Scenario: Try to create a new blog post without filling out form
     Given I am an authenticated user with email: "bob@email.com"
-    When I follow "Create A New Blog Post"
+    When I follow "New Post"
     And I follow "Sign up"
     And I fill in "Email" with "me@email.com"
     And I fill in "user_password" with "colgate"
@@ -81,7 +81,7 @@ Feature: Create a new Blog Post
 
     Scenario: Try to create a new blog post without filling out form
     Given I am an authenticated user with email: "bob@email.com"
-    When I follow "Create A New Blog Post"
+    When I follow "New Post"
     And I follow "Sign up"
     And I fill in "Email" with "me@email.com"
     And I fill in "user_password" with "colgate"

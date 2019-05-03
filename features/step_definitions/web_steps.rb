@@ -296,25 +296,25 @@ end
 
 Then("I should see that {string} has a rating of {int}") do |title, int|
   if page.respond_to? :should
-    page.find('tr', text:title).should have_content(int)
+    page.find('.rating', text:int).should have_content(int)
   else
-    assert page.find('tr', text:title).has_content?(int)
+    assert page.find('.rating', text:int).has_content?(int)
   end
 end
 
 Then("I should see that {string} has a Meal Time of {string}") do |title, time|
   if page.respond_to? :should
-    page.find('tr', text:title).should have_content(time)
+    page.find('.category', text:time).should have_content(time)
   else
-    assert page.find('tr', text:title).has_content?(time)
+    assert page.find('.category', text:time).has_content?(time)
   end
 end
 
 Then("I should see that {string} has a Location of {string}") do |title, location|
   if page.respond_to? :should
-    page.find('tr', text:title).should have_content(location)
+    page.find('.location', text:location).should have_content(location)
   else
-    assert page.find('tr', text:title).has_content?(location)
+    assert page.find('.location', text:location).has_content?(location)
   end
 end
 
@@ -332,4 +332,28 @@ Given(/^I am an authenticated user with email: "(.*)"$/) do |email|
   click_button "Sign up"
   visit '/blog_posts'
   # byebug
+end
+
+When("I click on post {string}") do |string|
+  if page.respond_to? :should
+    page.find(:xpath, "//a[@id='#{string}']").click()
+  else
+    assert page.find(:xpath, "//a[@id='#{string}']").click()
+  end
+end
+
+When("I submit comment {string}") do |id|
+  if page.respond_to? :should
+    page.find(:xpath, "//input[@id='#{id}']").click()
+  else
+    assert page.find(:xpath, "//input[@id='#{id}']").click()
+  end
+end
+
+When("I press on logout {string}") do |string|
+  if page.respond_to? :should
+    page.find(:xpath, "//a[contains(text(),#{string})]']").click()
+  else
+    assert page.find(:xpath, "//a[contains(text(),#{string})]").click()
+  end
 end

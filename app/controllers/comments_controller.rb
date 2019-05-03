@@ -7,6 +7,8 @@ class CommentsController < ApplicationController
     @comment = Comment.new(create_comment_params)
     @comment.user = current_user
     @post.comments << @comment
+    comment = Comment.new(create_comment_params)
+    comment.user = current_user
     
     # redirect_to blog_post_path(@post)
     # byebug

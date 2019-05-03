@@ -5,7 +5,7 @@ Feature: Filter and sort rental properties
 
   Background: the website already has some existing blog posts
     Given I am an authenticated user with email: "bob@email.com"
-    When I follow "Create A New Blog Post"
+    When I follow "New Post"
     And I follow "Sign up"
     And I fill in "Email" with "me@email.com"
     And I fill in "user_password" with "colgate"

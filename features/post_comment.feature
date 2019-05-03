@@ -23,7 +23,7 @@ Feature: Be able to comment on a blog post
       And I press "Log in"
       And I follow "Gross Spinach"
       And I fill in "commentbox" with "Good"
-      And I press "Add comment"
+      And I submit comment "submitcomment"
       Then I should see "Good"
 
 

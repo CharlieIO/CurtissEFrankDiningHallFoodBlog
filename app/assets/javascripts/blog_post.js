@@ -8,7 +8,7 @@ var blog_posts = (function() {
       console.log(event_detail)
       $("#comments li").append(event_detail);
       $("#commentbox")[0].value = "";
-    //   location.href.pathname;
+      location.href.pathname;
     };
 
     return {

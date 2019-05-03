@@ -1,4 +1,4 @@
-%h2 Edit Blog Post
+%h2.editpage_title Edit Blog Post
 .h5
     #myBar.progress-bar
 -# .progress-container
@@ -26,27 +26,33 @@
         .row
     
     -# %p.curr_img= post.image.variant(resize: "500x500^") 
-
-    = post.label :title, 'Title'
-    = post.text_field :title
-    .row
-    = post.label :category, 'Meal Time'
-    = post.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One'
-    .row
-    = post.label :location, 'Location'
-    = post.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One'
-    .row
-    = post.label :description, 'How was it?'
-    = post.text_field :description
-    .row
-    = post.label :rating, 'Rating'
-    = post.number_field :rating, in: 0..5, step: 1
-    .row
-    =post.label :image, "Image"
-    =post.file_field :image, accept: "image/png,image/gif,image/jpeg"
-    .row
-    %br
-    = post.submit "Update Blog Post"
-    .row
-    .row
-    = link_to "Back To All Blog Posts", blog_posts_path()
+    %div.edit_text
+        = post.label :title, 'Title', :class => 'edit_title'
+        .row
+        = post.text_field :title, :class => 'edit_title2'
+        .row
+        = post.label :category, 'Meal Time', :class => 'edit_cat'
+        .row
+        = post.select :category, ['Breakfast', 'Lunch', 'Dinner'], prompt: 'Select One', :class => 'edit_cat2'
+        .row
+        = post.label :location, 'Location', :class => 'edit_loc'
+        .row
+        = post.select :location, ['Frank', 'Coop', 'Library Cafe'], prompt: 'Select One', :class => 'edit_loc2'
+        .row
+        = post.label :description, 'How was it?', :class => 'edit_desc'
+        .row
+        = post.text_field :description, :class => 'edit_desc2'
+        .row
+        = post.label :rating, 'Rating', :class => 'edit_rate'
+        .row
+        = post.number_field :rating, in: 0..5, step: 1, :class => 'edit_rate2'
+        .row
+        =post.label :image, "Image",:class => 'edit_img'
+        .row
+        =post.file_field :image, accept: "image/png,image/gif,image/jpeg", :class => 'edit_img2'
+        .row
+        %br
+        = post.submit "Update Blog Post", :class => 'edit_submit'
+        .row
+        .row
+        = link_to "Back To All Blog Posts", blog_posts_path(), :class => 'edit_back'

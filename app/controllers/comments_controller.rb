@@ -10,12 +10,15 @@ class CommentsController < ApplicationController
     
     # redirect_to blog_post_path(@post)
     # byebug
+    # if @comment == ''
+    #   redirect_to blog_post_path(@post)
+    
     if @comment.save
       # byebug
-      # render :partial => @comment
-      redirect_to blog_post_path(@post)
+      render :partial => comment
+      # redirect_to blog_post_url(@post)
     end
-      redirect_to blog_post_path(@post)
+      # redirect_to blog_post_path(@post)
     # else
     #   redirect_to blog_post_path(@post)
     # end

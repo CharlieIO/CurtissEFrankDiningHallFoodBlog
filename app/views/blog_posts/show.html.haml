@@ -37,12 +37,14 @@
             %h3.header.title= "#{@post.title}"
             %h4.header.title= "By #{@user}"
             %p= render_shareable
-    
-    %p.image_show= image_tag @post.image.attached? ? @post.image.variant(resize: "500x500^") : 'noimg.png'
-    %p.title_show= "#{@post.title}"
-    %p.location_show= "#{@post.category} at #{@post.location}"
-    %p.description_show= "#{@post.description}"
-    %p.rating_show= "Rated #{@post.rating}/5 Stars"
+    %div.show_imgandtext
+        
+        %div.show_detailtext
+            %p.title_show= "#{@post.title}" 
+            %p.image_show= image_tag @post.image.attached? ? @post.image.variant(resize: "500x500^") : 'noimg.png'
+            %p.location_show= "#{@post.category} at #{@post.location}"
+            %p.description_show= "#{@post.description}"
+            %p.rating_show= "Rated #{@post.rating}/5 Stars"
 
     %br
     %br
@@ -52,8 +54,9 @@
 #comments.row
     %h3 Comments
     %ul
-    -@comments.each do |comment|
-        =render :partial => comment
+    %div.commentstext
+        -@comments.each do |comment|
+            =render :partial => comment
 
 .row
     -if user_signed_in?

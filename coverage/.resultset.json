@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/models/user.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/user.rb": [
         1,
         null,
         null,
@@ -11,64 +11,24 @@
         1,
         null
       ],
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/models/application_record.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/helpers/application_helper.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/helpers/blog_posts_helper.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/helpers/blog_posts_helper.rb": [
         1,
         null
       ],
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/helpers/comments_helper.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/helpers/comments_helper.rb": [
         1,
         null
       ],
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/controllers/comments_controller.rb": [
-        1,
-        1,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/controllers/application_controller.rb": [
-        1,
-        null
-      ],
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/models/blog_post.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/blog_post.rb": [
         1,
         1,
         1,
@@ -93,13 +53,53 @@
         null,
         null
       ],
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/models/comment.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/models/comment.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/shoshi/CurtissEFrankDiningHallFoodBlog/app/controllers/blog_posts_controller.rb": [
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/controllers/application_controller.rb": [
+        0,
+        0
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/controllers/comments_controller.rb": [
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/adiacovo/Desktop/FoodBlog/CurtissEFrankDiningHallFoodBlog/app/controllers/blog_posts_controller.rb": [
         0,
         null,
         0,
@@ -195,7 +195,7 @@
         0
       ]
     },
-    "timestamp": 1556915795
+    "timestamp": 1556916349
   },
   "Cucumber Features": {
     "coverage": {
@@ -393,6 +393,6 @@
         null
       ]
     },
-    "timestamp": 1556914056
+    "timestamp": 1556915948
   }
 }

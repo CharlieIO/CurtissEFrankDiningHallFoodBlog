@@ -39,7 +39,7 @@
       %p.navbar-link_up= link_to 'Edit profile', edit_user_registration_path
       %p.navbar-link_in= link_to "Logout", destroy_user_session_path, method: :delete
     - else
-      %body
+      %t9.body
         .navbar-link_up= link_to "Sign up", new_user_registration_path
         .navbar-link_in= link_to "Login", new_user_session_path
 

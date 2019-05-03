@@ -6,8 +6,9 @@ var blog_posts = (function() {
     var comment = function(Arg) {
       var event_detail = Arg.detail[2].responseText;
       console.log(event_detail)
-      $("#comments ul").append(event_detail);
+      $("#comments li").append(event_detail);
       $("#commentbox")[0].value = "";
+    //   location.href.pathname;
     };
 
     return {
@@ -74,6 +75,12 @@ $(window).on('load', function() {
                 location.href = "/blog_posts/";
             };
         };
+
+        // if (document.getElementsByTagName("input")) {
+        //     document.getElementsByTagName("input").onclick = function () {
+        //         window.location.reload(true);
+        //     };
+        // };
     })();
 });
 

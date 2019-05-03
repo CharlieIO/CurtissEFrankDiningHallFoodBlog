@@ -60,7 +60,7 @@
         =form_with(id: :comment_form, model: Comment.new, url: comments_path(@post), data: { type: :html } ) do |f|
             =f.label :comment
             =f.text_area :comment, :id => "commentbox"
-            =f.submit "Add comment"
+            =f.submit "Add comment", :id => "submitcomment"
     -else
         %p Sign in to post a comment.
 %br
@@ -68,6 +68,7 @@
 
     .row
         .col-md-offset-1
-        .col-md-2= link_to('Edit post details', edit_blog_post_path(@post))
-        .col-md-2= link_to('Delete post', blog_post_path(@post), :method => :delete)
-        .col-md-2= link_to('Back to blog home', blog_posts_path)
+        %div.crudlinks
+            .editlink= link_to('Edit', edit_blog_post_path(@post))
+            .deletelink= link_to('Delete', blog_post_path(@post), :method => :delete)
+            .backlink= link_to('Back', blog_posts_path)

@@ -7,11 +7,15 @@ class CommentsController < ApplicationController
     @comment = Comment.new(create_comment_params)
     @comment.user = current_user
     @post.comments << @comment
+    
+    # redirect_to blog_post_path(@post)
     # byebug
     if @comment.save
+      # byebug
       # render :partial => @comment
       redirect_to blog_post_path(@post)
     end
+      redirect_to blog_post_path(@post)
     # else
     #   redirect_to blog_post_path(@post)
     # end

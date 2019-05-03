@@ -40,7 +40,7 @@ class BlogPostsController < ApplicationController
       @post.update(create_update_params)
       if @post.save
         flash[:notice] = "#{@post.title} was successfully updated!"
-        redirect_to edit_blog_post_path(@post) and return
+        redirect_to blog_post_path(@post) and return
       end
     else
       flash[:warning] = "You don't have permission to do that."
